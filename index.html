@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Building Mobile Applications with HTML/Js/Css and Phonegap</title>
+    <link rel="stylesheet" href="styles/styles.css"/>
+  </head>
+  <body>
+    <article>
+      <section data-bespoke-state="dark" class="dark">
+        <h1>Building Mobile Applications</h1><span>with</span>
+        <h2>HTML/Js/Css</h2><span>and</span>
+        <h2>Phonegap</h2>
+      </section>
+      <section>
+        <h2>Program</h2>
+        <ul>
+          <li>Native vs Cross platform</li>
+          <li>Phonegap Architecture</li>
+          <li>Javascript - Css - Html</li>
+          <li>jQuery Mobile</li>
+          <li>Yeoman workflow for webapps</li>
+          <li>Development Phonegap</li>
+          <li>Phonegap build</li>
+          <li>AppStore - Google Play</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Matteo Magni</h2>
+        <h3>Twitter <a href="http://github.com/ilbonzo">@ilbonzo</a></h3>
+        <h3>Github <a href="http://twitter.com/ilbonzo">@ilbonzo</a></h3>
+      </section>
+      <section data-bespoke-state="cross gif"></section>
+      <section data-bespoke-state="multi-team png"></section>
+      <section data-bespoke-state="money gif"></section>
+      <section data-bespoke-state="one-team png"></section>
+      <section data-bespoke-state="yeah gif">
+        <h1 class="white">Yeah!</h1>
+      </section>
+      <section>
+        <h3>Advantages</h3>
+        <ul>
+          <li>write one application</li>
+          <li>support different mobile platforms and web</li>
+          <li>exploit knowledge of web technologies</li>
+          <li>can use sensors and native features of the phone</li>
+          <li>can publish on store</li>
+        </ul>
+      </section>
+      <section data-bespoke-state="mmm gif">
+        <h1>mmm?</h1>
+      </section>
+      <section>
+        <h3>Disadvantages</h3>
+        <ul>
+          <li>performance</li>
+          <li>lack of widget UI</li>
+          <li>Identica UX on all platforms</li>
+          <li>larger executable size</li>
+        </ul>
+      </section>
+      <section data-bespoke-state="pick-your-poison png"></section>
+      <section>
+        <h3>Alternative</h3>
+        <ul>
+          <li>PhoneGap (HTML/JS)
+            <div><a href="http://phonegap.com/">http://phonegap.com</a></div>
+          </li>
+          <li>Appcelerator Titanium (JS)
+            <div><a href="http://www.appcelerator.com/platform">http://www.appcelerator.com/platform</a></div>
+          </li>
+          <li>Corona SDK (lua)
+            <div><a href="http://www.coronalabs.com/products/corona-sdk/">http://www.coronalabs.com/products/corona-sdk/</a></div>
+          </li>
+          <li>Marmalade (Visual C++)
+            <div><a href="http://www.madewithmarmalade.com">http://www.madewithmarmalade.com</a></div>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <div>PhoneGap was originally developed by <strong>Nitobi</strong>, a company acquired by <strong>Adobe</strong> in 2011. After it was acquired, Nitobi donated the PhoneGap code base to the <strong>Apache Software Foundation</strong> (ASF) under the project name Cordova.</div>
+        <div>Cordova is the name of the street in Vancouver where Nitobi's offices were located and where the company create the first version of framework</div>
+      </section>
+      <section class="fight gif">
+        <h1 class="black">Cordova vs Phonegap</h1>
+      </section>
+      <section><a href="http://phonegap.com/2012/03/19/phonegap-cordova-and-what%E2%80%99s-in-a-name/">http://phonegap.com/2012/03/19/phonegap-cordova-and-what%E2%80%99s-in-a-name</a>
+        <blockquote>"PhoneGap is a distribution of Apache Cordova. You can think of Apache Cordova as the engine that powers PhoneGap, similar to how WebKit is the engine that powers Chrome or Safari. <br/>(Browser geeks, please allow me the affordance of this analogy and I’ll buy you a beer later.)"</blockquote>
+      </section>
+      <section data-bespoke-state="green">
+        <div>PhoneGap is a free and open source framework that allows you to create mobile apps  with<br><em>html, css and javascript.</em></div>
+        <div>Think of PhoneGap as a web view container that is<br><em>100% width and 100% height</em></div>
+      </section>
+      <section>
+        <h3>Phonegap workflow</h3><img class="full" src="images/phonegap-workflow.png" />
+      </section>
+      <section data-bespoke-state="green">
+        <h3>support platform</h3>
+        <ul>
+          <li>iOS</li>
+          <li>Android</li>
+          <li>Windows 8</li>
+          <li>Windows Phone 7 and 8</li>
+          <li>BlackBerry 5.x+</li>
+          <li>WebOS</li>
+          <li>Symbian</li>
+          <li>Tizen</li>
+          <li>Ubuntu</li>
+        </ul>
+      </section>
+      <section data-bespoke-state="phonegap-support png"></section>
+      <section><div><img class="full" src="images/phonegap-architecture.jpg" /></div></section>
+      <section>
+        <h3>platform details for simulator</h3>
+        <ul>
+          <li>Android emulator on Linux, Windows, OSx</li>
+          <li>iOS only in OSx</li>
+          <li>Blackberry on Windows and OSx</li>
+          <li>Windows Phone on Windows</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Ripple</h3>
+        <div>Emulate app in desktop browser with Chrome extension Ripple</div>
+      </section>
+      <section data-bespoke-state="ripple png"></section>
+      <section data-bespoke-state="green">
+        <h1>Html5</h1>
+      </section>
+      <section data-bespoke-state="mobile-html5 png"></section>
+      <section>
+        <HTML5></HTML5>
+        <ul>
+          <li>WebSQL</li>
+          <li>XHR</li>
+          <li>&lt;audio&gt;</li>
+          <li>&lt;video&gt;</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Viewport</h2>
+        <blockquote>The viewport meta tag The viewport meta tag was introduced by Apple with iOS 1.0 and is largely supported in all the major mobile browsers. When a web page doesn't fit the size of the browser, the default behavior of a mobile browser is to scale it. The viewport meta tag is what you need in order to have control over this behavior.</blockquote>
+      </section>
+      <section data-bespoke-state="blue" class="blue">
+        <h2>jQuery</h2>
+        <h5>"jQuery: The Write Less, Do More, JavaScript Library"</h5>
+      </section>
+      <section class="jquery-way">
+        <h2>"jQuery is defintly the way"</h2>
+      </section>
+      <section>
+        <h2>Performance</h2>
+        <blockquote>I use jQuery and I love it, but I will not advise the use of jQuery when building a hybrid multi-page app. Also, if the jQuery library is downloaded once, the file is parsed each time it's included in an HTML page. Performance on mobiles is crucial. If you don't seriously consider optimizing each aspect of your app, you risk losing users. Bad performance can also lead to high battery consumption.</blockquote>
+      </section>
+      <section data-bespoke-state="blue" class="blue">
+        <h2>Single Page Web App</h2>
+        <ul>
+          <li>
+            <h3 class="white">when</h3>
+          </li>
+          <li>frequently navigation</li>
+          <li>the pages change partially</li>
+          <li>critical performance</li>
+        </ul>
+      </section>
+      <section data-bespoke-state="dark" class="dark">
+        <h2>Optimization</h2>
+        <ul>
+          <li></li>
+          <li>use sprite css</li>
+          <li>restrict access to the dom</li>
+        </ul>
+      </section>
+      <section data-bespoke-state="user-interface png">
+        <h2>WTF???</h2>
+      </section>
+      <section data-bespoke-state="jqm gif"></section>
+      <section>
+        <h4>alternative a jQuery Mobile</h4>
+        <ul>
+          <li><a href="http://ionicframework.com/">Ionic</a></li>
+          <li><a href="http://www.sencha.com/products/touch/">Sencha Touch</a></li>
+          <li><a href="http://www.kendoui.com/">Kendo UI Complete</a></li>
+          <li><a href="http://www.appgyver.com/steroids">AppGyver’s Steroids</a></li>
+          <li><a href="http://enyojs.com/">Enyo</a></li>
+          <li><a href="http://topcoat.io/">TopCoat</a></li>
+          <li><a href="http://getbootstrap.com/">Bootstrap</a></li>
+          <li><a href="http://html5boilerplate.com/">Html5Boilerplate</a></li>
+          <li><a href="http://foundation.zurb.com/">Foundation</a></li>
+        </ul>
+      </section>
+      <section>
+        <h3>
+          jQuery Mobile layout
+          <div><img src="images/jquery-mobile-layout.png" /></div>
+        </h3>
+      </section>
+      <section>
+        <h3>
+          Buttons
+          <div><img src="images/jquery-mobile-buttons.png" /></div>
+        </h3>
+      </section>
+      <section>
+        <h3>
+          list
+          <div class="full"><img src="images/jquery-mobile-list.png" /></div>
+        </h3>
+      </section>
+      <section>
+        <h3>
+          navigation
+          <div><img src="images/jquery-mobile-navigation.png" /></div>
+        </h3>
+      </section>
+      <section>
+        <h3>
+          forms
+          <div><img src="images/jquery-mobile-forms.png" /></div>
+        </h3>
+      </section>
+      <section data-bespoke-state="green">
+        <h3>HTML5 Markup-driven configuration makes it easy to learn</h3>
+        <h3>Data Attributes</h3>
+      </section>
+      <section data-bespoke-state="green">
+        <pre><code class="language-javascript">&lt;div data-role=&quot;page&quot;&gt;
+  &lt;div data-role=&quot;header&quot;&gt;...&lt;/div&gt;
+  &lt;div role=&quot;main&quot; class=&quot;ui-content&quot;&gt;...&lt;/div&gt;
+  &lt;div data-role=&quot;footer&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+      </section>
+      <section><a href="http://demos.jquerymobile.com/1.4.2/">http://demos.jquerymobile.com/1.4.2/</a><a href="http://jquerymobile.com/download/">http://jquerymobile.com/download/</a></section>
+      <section data-bespoke-state="theme png"></section>
+      <section data-bespoke-state="theme-roller png">
+        <ul>
+          <li></li>
+          <li>
+            <h1>Nostro tema</h1>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Evvent demo app</h2>
+        <h3><a href="https://github.com/ilbonzo/Evvent">https://github.com/ilbonzo/Evvent</a></h3><div><img class="seven" src="images/evvent-list.png" /></div>
+      </section>
+      <section>
+        <h2>Evvent</h2>
+        <ul>
+          <li>events list</li>
+          <li>event view</li>
+          <li>layout</li>
+          <li>...</li>
+          <li>
+            <h4>develop a prototype</h4>
+          </li>
+        </ul>
+      </section>
+      <section data-bespoke-state="frontend-dev png">
+        <h1 class="class top">Frontend developer</h1>
+      </section>
+      <section data-bespoke-state="green">
+        <ul>
+          <li>code organization</li>
+          <li>repetitive tasks</li>
+          <li>tool and librery dependency</li>
+        </ul>
+      </section>
+      <section>
+        <h2><img class="full" src="images/backbone.png"/></h2>
+        <h4><a href="http://backbonejs.org">backbonejs.org</a></h4>
+        <blockquote>" JavaScript library with a RESTful JSON interface and is based on the model–view–presenter (MVP) application design paradigm"</blockquote>
+      </section>
+      <section data-bespoke-state="green">
+        <h2>MV* framework</h2>
+        <ul>
+          <li>Routing</li>
+          <li>Model</li>
+          <li>View</li>
+          <li>Template</li>
+          <li>Collection</li>
+        </ul>
+        <h3>Single page webapp</h3>
+      </section>
+      <section data-bespoke-state="green">
+        <h2>Alternative</h2>
+        <ul>
+          <li></li>
+          <li><a href="https://angularjs.org/">Angularjs</a></li>
+          <li><a href="http://knockoutjs.com/">Knockoutjs</a></li>
+          <li><a href="http://emberjs.com/">Emberjs</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Backbonejs routing</h2>
+        <hr>
+        <pre><code class="language-javascript">routes: {
+  '': 'home',
+  'events': 'events',
+  'events/:id': 'getEvent'
+},
+// Home method
+home: function() {
+    var home = new HomeView({'el': '#content'});
+},
+// events method
+events: function() {
+    var events = new EventsView({'el': '#content'});
+},
+</code></pre>
+      </section>
+      <section>
+        <h2>backbonejs model</h2>
+        <hr>
+        <pre><code class="language-javascript">var EventModel = Backbone.Model.extend({
+    defaults: {
+        id: '',
+        title: '',
+        date: ''
+    }
+});
+</code></pre>
+      </section>
+      <section>
+        <h2>backbonejs view</h2>
+        <hr>
+        <pre><code class="language-javascript">var EventView = Backbone.View.extend({
+  template: JST['app/scripts/templates/event.ejs'],
+});
+</code></pre>
+      </section>
+      <section>
+        <h2>javascript template</h2><a href="https://code.google.com/p/trimpath/wiki/JavaScriptTemplates">https://code.google.com/p/trimpath/wiki/JavaScriptTemplates</a>
+        <hr>
+        <pre><code class="language-javascript">&lt;h2&gt;Event View&lt;/h2&gt;
+&lt;p&gt;Evento con id: <%= id %>&lt;/p&gt;
+</code></pre>
+      </section>
+      <section data-bespoke-state="nodejs gif"></section>
+      <section data-bespoke-state="black" class="black">
+        <h2>package.json</h2>
+        <pre><code class="language-javascript">{
+  "name": "evvent-web",
+  "version": "0.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-copy": "~0.4.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-contrib-jst": "~0.5.0"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  }
+}
+
+</code></pre>
+      </section>
+      <section data-bespoke-state="black" class="black">
+        <pre><code class="language-javascript">$ npm install
+$ npm update
+</code></pre>
+      </section>
+      <section class="gif grunt-happy black">
+        <h1>
+          <div class="bullet">GRUNT</div>
+          <div class="bullet">+</div>
+          <div class="bullet">BOWER</div>
+          <div class="bullet">+</div>
+          <div class="bullet">YEOMAN</div>
+        </h1>
+      </section>
+      <section data-bespoke-state="black" class="black">
+        <h2>Yeoman</h2><span><a href="http://yeoman.io">yeoman.io</a></span><span>THE WEB'S SCAFFOLDING TOOL FOR MODERN WEBAPPS</span>
+        <pre><code class="language-shell">$ npm install -g yo</code></pre>
+        <div><img src="images/yeoman.png"></div>
+        <div>This will install <strong>Grunt</strong> and Bower automatically.</div>
+      </section>
+      <section data-bespoke-state="grunt gif">
+        <h1 class="white">Grunt</h1>
+        <pre><code class="language-javascript">npm install -g grunt
+</code></pre>
+      </section>
+      <section>
+        <h2>Gruntfile.js</h2>
+        <pre><code class="language-javascript">module.exports = function (grunt) {
+  // show elapsed time at the end
+  require('time-grunt')(grunt);
+  // load all grunt tasks
+  require('load-grunt-tasks')(grunt);
+  ...
+}
+</code></pre>
+      </section>
+      <section data-bespoke-state="grunt gif">
+        <pre><code class="language-javascript">npm install -g grunt-cli
+# grunt installato per ogni progetto
+npm install grunt
+
+</code></pre>
+      </section>
+      <section data-bespoke-state="green">
+        <h1>Grunt plugin</h1>
+        <ul>
+          <li></li>
+          <li>copy</li>
+          <li>concat</li>
+          <li>cssmin</li>
+          <li>uglify</li>
+        </ul>
+      </section>
+      <section>
+        <h2>grunt</h2>
+        <pre><code class="language-javascript">$ grunt serve
+</code></pre>
+      </section>
+      <section data-bespoke-state="bower gif"></section>
+      <section>
+        <h2>bower.json</h2>
+        <pre><code class="language-javascript">Bower
+{
+  "name": "evvent-web",
+  "version": "0.0.0",
+  "dependencies": {
+    "jquery": "~1.9.0",
+    "underscore": "~1.4.3",
+    "backbone": "~1.0.0",
+    "requirejs": "~2.1.5",
+    "requirejs-text": "~2.0.5",
+    "modernizr": "~2.6.2",
+  },
+  "devDependencies": {}
+}
+</code></pre>
+      </section>
+      <section>
+        <h2>.bowerrc</h2>
+        <pre><code class="language-javascript">{
+    "directory": "app/bower_components"
+}
+</code></pre>
+      </section>
+      <section data-bespoke-state="dark" class="dark">
+        <h4>Example</h4><a href="https://github.com/ilbonzo/Evvent/tree/master/example">https://github.com/ilbonzo/Evvent/tree/master/example</a>
+        <ul>
+          <li>
+            <h3 class="white">Yeoman generator</h3>
+          </li>
+          <li><a href="https://github.com/bauschan/generator-jquery-mobile">github.com/bauschan/generator-jquery-mobile</a>
+            <ul>
+              <li>
+                <pre><code class="language-javascript">npm install -g generator-jquery-mobile</code></pre>
+              </li>
+              <li><a href="http://evvent.dev:9001">evvent.dev:9001</a></li>
+            </ul>
+          </li>
+          <li><a href="https://github.com/yeoman/generator-backbone">github.com/yeoman/generator-backbone</a>
+            <ul>
+              <li>
+                <pre><code class="language-javascript">npm install -g generator-backbone</code></pre>
+              </li>
+              <li><a href="http://evvent.dev:9002">evvent.dev:9002</a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section data-bespoke-state="dark" class="dark">
+        <h4>Example</h4><a href="https://github.com/ilbonzo/Evvent/tree/master/example">https://github.com/ilbonzo/Evvent/tree/master/example</a>
+        <ul>
+          <li><a href="https://github.com/yeoman/generator-mobile">github.com/yeoman/generator-mobile</a>
+            <ul>
+              <li>
+                <pre><code class="language-javascript">npm install -g generator-mobile</code></pre>
+              </li>
+              <li><a href="http://evvent.dev:9003">evvent.dev:9003</a></li>
+            </ul>
+          </li>
+          <li><a href="https://www.npmjs.org/package/generator-phonegap">www.npmjs.org/package/generator-phonegap</a>
+            <ul>
+              <li><code>
+                  <pre class="language-javascript">npm install -g generator-phonegap</pre></code></li>
+              <li><a href="http://evvent.dev:9004">evvent.dev:9004</a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section data-bespoke-state="green" class="green">
+        <h2>Altre utility</h2>
+        <ul>
+          <li>Underscore</li>
+          <li>requirejs</li>
+          <li>Requirejs-text</li>
+          <li>Modernizr</li>
+        </ul>
+      </section>
+      <section>
+        <h2>requirejs</h2>
+        <pre><code class="language-javascript">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;My Sample Project&lt;/title&gt;
+        &lt;!-- data-main attribute tells require.js to load
+             scripts/main.js after require.js loads. --&gt;
+        &lt;script data-main=&quot;scripts/main&quot;
+          src=&quot;scripts/require.js&quot;&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;My Sample Project&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      </section>
+      <section>
+        <h2>main.js</h2>
+        <pre><code class="language-javascript">require.config({
+    shim: {
+        underscore: {
+            exports: '_'
+        },
+        ...
+    },
+    paths: {
+        underscore: '../bower_components/underscore/underscore',
+        ...
+    }
+});
+
+</code></pre>
+      </section>
+      <section>
+        <h3>Partiamo dal generator-backbone</h3><em><a href="https://github.com/yeoman/generator-backbone">https://github.com/yeoman/generator-backbone</a></em>
+        <div><img src="images/evvent-backbone-start.png"/></div>
+      </section>
+      <section>
+        <h3>Aggiungiamo jquery mobile</h3><em><a href="https://github.com/jobrapido/jquery-mobile-bower">https://github.com/jobrapido/jquery-mobile-bower</a></em>
+        <pre><code class="language-javascript">{
+  "name": "evvent-web",
+  "version": "0.0.0",
+  "dependencies": {
+    "jquery": "~1.9.0",
+    "underscore": "~1.4.3",
+    "backbone": "~1.0.0",
+    "requirejs": "~2.1.5",
+    "requirejs-text": "~2.0.5",
+    "modernizr": "~2.6.2",
+    ---
+    <strong>"jquery-mobile-bower" : "latest"</strong>
+    ---
+  },
+  </code></pre>
+      </section>
+      <section>
+        <pre><code>$ bower update</code></pre><div><img class="full" src="images/bower-update.png" /></div>
+      </section>
+      <section>
+        <h3>aggiungiamo a requirejs</h3>
+        <pre><code class="language-javascript">/*global require*/
+'use strict';
+require.config({
+    shim: {
+        ...
+        jquerymobile: {
+            deps: [
+                'jquery'
+            ],
+            exports: 'jqm'
+        }
+    },
+    paths: {
+        ....
+        jquerymobile:
+        '../bower_components/jquery-mobile-bower/
+            js/jquery.mobile-1.4.2'
+    }
+});
+require([
+    'backbone', 'jquerymobile'
+], function (Backbone) {
+    Backbone.history.start();
+});
+</code></pre>
+      </section>
+      <section>
+        <h3>add css and data attributes</h3>
+        <pre><code class="language-javascript"># index.html
+&lt;link rel=&quot;stylesheet&quot;
+href=&quot;bower_components/jquery-mobile-bower/
+        css/jquery.mobile-1.4.2.css”&gt;
+&lt;div data-role=&quot;page&quot; data-theme=&quot;a&quot; id=&quot;index&quot;&gt;
+    &lt;div data-role=&quot;header&quot;&gt;
+        &lt;h1&gt;Evvent&lt;/h1&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+      </section>
+      <section data-bespoke-state="blue" class="blue">
+        <h2>strict mode</h2><a href="http://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode">strict mode</a>
+        <blockquote>Converting mistakes into errors</blockquote>
+      </section>
+      <section data-bespoke-state="dark" class="dark">
+        <div class="content">
+          <table>
+            <thead>
+              <tr>
+                <td>
+                  <h3>Non-strict mode</h3>
+                </td>
+                <td>
+                  <h3>Strict mode</h3>
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <pre><code data-language="javascript">function someSetup() {
+  a = Math.PI;
+}
+someSetup();
+console.log(a);
+// 3.14159...</code></pre>
+                </td>
+                <td>
+                  <pre><code data-language="javascript">"use strict";
+function someSetup() {
+  a = Math.PI; // BOOM!
+}
+someSetup();
+console.log(a);</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <h4>throws ReferenceError</h4>"Strict mode forbids implicit creation of global property 'a'"
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section data-bespoke-state="dark" class="dark">
+        <div class="content nofade">
+          <table>
+            <thead>
+              <tr>
+                <td>
+                  <h3 data-bespoke-bullet>Non-strict mode</h3>
+                  <h3 data-bespoke-bullet>YOLO mode</h3>
+                </td>
+                <td>
+                  <h3>Strict mode</h3>
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <pre><code data-language="javascript">function someSetup() {
+  a = Math.PI;
+}
+someSetup();
+console.log(a);
+// 3.14159...</code></pre>
+                </td>
+                <td>
+                  <pre><code data-language="javascript">"use strict";
+function someSetup() {
+  var a = Math.PI;
+}
+someSetup();
+console.log(a); // BOOM!</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <h4>throws ReferenceError</h4>"Can't find variable: a"
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section data-bespoke-state="reveal">
+        <h2>Backbone structure</h2>
+        <div><img src="images/backbone-structure.png" class="seven"></div>
+      </section>
+      <section data-bespoke-state="black" class="black">
+        <h2>Yeoman scaffolding</h2>
+        <pre><code class="language-javascript">vagrant@precise64:/workspace/evvent-web$ yo backbone:router appRouter
+   create app/scripts/routes/appRouter.js
+   </code></pre>
+      </section>
+      <section data-bespoke-state="black" class="black">
+        <h3 class="white">Home</h3>
+        <pre><code class="language-javascript">vagrant@precise64:/workspace/evvent-web$ yo backbone:view home
+   create app/scripts/templates/home.ejs
+   create app/scripts/views/home.js
+   </code></pre>
+      </section>
+      <section data-bespoke-state="black" class="black">
+        <h3 class="white">Event</h3>
+        <pre><code class="language-javascript">vagrant@precise64:/workspace/evvent-web$ yo backbone:model event
+   create app/scripts/models/event.js
+vagrant@precise64:/workspace/evvent-web$ yo backbone:view event
+   create app/scripts/templates/event.ejs
+   create app/scripts/views/event.js
+   </code></pre>
+      </section>
+      <section data-bespoke-state="black" class="black">
+        <h3 class="white">Events</h3>
+        <pre><code class="language-javascript">vagrant@precise64:/workspace/evvent-web$ yo backbone:collection events
+   create app/scripts/collections/events.js
+vagrant@precise64:/workspace/evvent-web$ yo backbone:view events
+   create app/scripts/templates/events.ejs
+   create app/scripts/views/events.js
+   </code></pre>
+      </section>
+      <section>
+        <h2>json for data</h2>
+        <pre><code class="language-javascript">[
+  {
+      "id": "53133a5de974d00e11e858af",
+      "title": "Nine Inch Nails",
+      "date": "19/09/2014",
+      "image": "nin.jpg"
+  },
+  {
+      "id": "53133a5de974d00e11e85eaf",
+      "title": "Mad Season",
+      "date": "20/10/2014",
+      "image": "mad-season.jpg"
+  },
+...
+]
+</code></pre>
+      </section>
+      <section data-bespoke-state="reveal">
+        <h2>Development PhoneGap app</h2>
+      </section>
+      <section data-bespoke-state="reveal">
+        <h2>Phonegap Architecture</h2><img src="images/phonegap-architecture.jpg" class="full">
+      </section>
+      <section data-bespoke-state="reveal">
+        <h2>cli</h2>
+      </section>
+      <section data-bespoke-state="blue" class="blue">
+        <h2>Cordova Cli</h2>
+        <h3><a href="https://github.com/apache/cordova-cli">https://github.com/apache/cordova-cli</a>
+          <pre><code class="language-javascript">$ npm install -g cordova
+</code></pre>
+        </h3>
+      </section>
+      <section data-bespoke-state="blue" class="blue">
+        <h2>Cordova Cli</h2>
+        <pre><code class="language-javascript">$ cordova create evvent-cordova com.ilbonzo.evvent "Evvent"
+$ cd evvent-cordova
+</code></pre>
+      </section>
+      <section data-bespoke-state="blue" class="blue">
+        <h2>Cordova Cli tree</h2>
+        <div><img src="images/cordova-cli.png" class="seven"></div>
+      </section>
+      <section data-bespoke-state="green">
+        <h2>Phonegap Cli</h2>
+        <h3><a href="https://github.com/phonegap/phonegap-cli">https://github.com/phonegap/phonegap-cli</a>
+          <pre><code class="language-javascript">$ npm install -g phonegap
+</code></pre>
+        </h3>
+      </section>
+      <section data-bespoke-state="green">
+        <h2>Phonegap Cli</h2>
+        <pre><code class="language-javascript">$ phonegap create evvent-phonegap com.ilbonzo.evvent "Evvent"
+$ cd evvent-phonegap
+</code></pre>
+      </section>
+      <section data-bespoke-state="green">
+        <h2>Phonegap Cli tree</h2>
+        <div><img src="images/phonegap-cli.png" class="seven"></div>
+      </section>
+      <section data-bespoke-state="reveal">
+        <h2>Simulators</h2>
+        <div><a href="http://docs.phonegap.com/en/3.0.0/guide_platforms_index.md.html#Platform%20Guides">http://docs.phonegap.com/en/3.0.0/guide_platforms_index.md.html#Platform%20Guides</a></div>
+      </section>
+      <section data-bespoke-state="reveal">
+        <h1>iOS</h1>
+      </section>
+      <section data-bespoke-state="reveal">
+        <h2>iOS</h2>
+        <h3>Cordova</h3>
+        <pre><code class="language-javascript">$ cordova platform add ios
+</code></pre>
+      </section>
+      <section data-bespoke-state="reveal">
+        <h2>iOS</h2>
+        <ul>
+          <li>
+            <pre><code class="language-javascript">$ cordova prepare  [platform...]</code></pre>
+          </li>
+          <li>
+            <blockquote>copies files into the specified platforms, or all platforms. It is then ready for building by Eclipse, Xcode, etc.</blockquote>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <pre><code class="language-javascript">$ cordova build  [<platform> [<platform> [...]]]</code></pre>
+          </li>
+          <li>
+            <blockquote>an alias for cordova prepare followed by cordova compile</blockquote>
+          </li>
+        </ul>
+      </section>
+      <section data-bespoke-state="reveal">
+        <h2>run ios project</h2>
+        <blockquote>Once created, you can open it from within Xcode. Double-click to open the evvent-cordova/platforms/ios/Evvent.xcodeproj file.</blockquote>
+      </section>
+      <section data-bespoke-state="cordova-xcode png"></section>
+      <section data-bespoke-state="reveal">
+        <h2>emulate</h2>
+        <ul>
+          <li>
+            <pre><code class="language-javascript">$ cordova emulate [<platform> [<platform> [...]]]</code></pre>
+          </li>
+          <li>
+            <blockquote>launch emulators and deploy app to them. With no parameters emulates for all platforms added to the project, otherwise emulates for the specified platforms</blockquote>
+          </li>
+        </ul>
+      </section>
+      <section data-bespoke-state="reveal">
+        <h2>serve</h2>
+        <ul>
+          <li>
+            <pre><code class="language-javascript">$ cordova serve [port]</code></pre>
+          </li>
+          <li>
+            <blockquote>launch a local web server allowing you to access each platform's www directory on the given port (default 8000).</blockquote>
+          </li>
+        </ul>
+      </section>
+      <section><img src="images/cordova-serve.png" class="seven"></section>
+      <section data-bespoke-state="reveal">
+        <h2>Phonegap Cli</h2>
+        <h3>command</h3>
+        <ul>
+          <li>create <path>        create a phonegap project</li>
+          <li>build <platform>     build the project for specific platform</li>
+          <li>install <platform>   install the project on a specific platform</li>
+          <li>run <platform>       build and install the projectfor specific platform</li>
+          <li>platform [command]   update a platform version</li>
+          <li>version              output version number</li>
+        </ul>
+      </section>
+      <section data-bespoke-state="reveal">
+        <h2>iOS</h2>
+        <h3>Phonegap</h3>
+        <pre><code class="language-javascript">$ phonegap build ios
+</code></pre>
+      </section>
+      <section data-bespoke-state="reveal"><img src="images/phonegap-build-ios.png" class="full"></section>
+      <section data-bespoke-state="reveal">
+        <h2>serve</h2>
+        <ul>
+          <li>
+            <pre><code class="language-javascript">$ phonegap serve [port]
+</code></pre>
+          </li>
+        </ul>
+      </section>
+      <section><img src="images/phonegap-serve.png" class="seven"></section>
+      <section data-bespoke-state="green">
+        <h2>ios-deploy</h2><img src="images/ios-deploy.png" class="full">
+      </section>
+      <section data-bespoke-state="green">
+        <h2>ios-deploy</h2>
+        <blockquote>Install and debug iPhone apps from the command line, without using Xcode</blockquote><a href="https://github.com/phonegap/ios-deploy">https://github.com/phonegap/ios-deploy</a>
+        <ul>
+          <li>
+            <pre><code class="language-javascript">$ npm -g install ios-deploy
+</code></pre>
+          </li>
+        </ul>
+      </section>
+      <section data-bespoke-state="green">
+        <h2>ios-sim</h2><img src="images/phonegap-ios-error.png" class="full">
+      </section>
+      <section data-bespoke-state="green">
+        <h2>ios-sim</h2>
+        <blockquote>Command-line application launcher for the iOS Simulator</blockquote><a href="https://github.com/phonegap/ios-sim">https://github.com/phonegap/ios-sim</a>
+        <ul>
+          <li>
+            <pre><code class="language-javascript">$ npm -g install ios-sim
+# or
+$ brew install ios-sim
+</code></pre>
+          </li>
+        </ul>
+      </section>
+      <section data-bespoke-state="blue" class="blue">
+        <h1>Android</h1>
+      </section>
+      <section data-bespoke-state="blue" class="blue">
+        <h2>Android</h2><a href="http://docs.phonegap.com/en/3.0.0/guide_platforms_android_index.md.html#Android%20Platform%20Guide">http://docs.phonegap.com/en/3.0.0/guide_platforms_android_index.md.html#Android%20Platform%20Guide</a>
+      </section>
+      <section data-bespoke-state="android-adt png"></section>
+      <section data-bespoke-state="blue" class="blue">
+        <pre><code class="language-javascript">#~/.bashrc
+export PATH=${PATH}:~/adt-bundle/sdk/platform-tools:~/adt-bundle/sdk/tools
+</code></pre>
+      </section>
+      <section data-bespoke-state="blue" class="blue">
+        <pre><code class="language-javascript">$ brew install ant
+</code></pre>
+      </section>
+      <section data-bespoke-state="blue" class="blue">
+        <h2>Android</h2>
+        <h3>Cordova</h3>
+        <pre><code class="language-javascript">$ cordova platform add android
+</code></pre>
+      </section>
+      <section data-bespoke-state="blue" class="blue">
+        <div>eclipse new project from existing source</div>
+      </section>
+      <section data-bespoke-state="blue" class="blue">
+        <div>add adt</div>
+      </section>
+      <section data-bespoke-state="blue" class="blue">
+        <pre><code class="language-javascript">$ cordova run android
+</code></pre>
+      </section>
+      <section data-bespoke-state="blue"><img src="images/android-simulator.png" class="full"></section>
+      <section data-bespoke-state="blue">
+        <h3>Phonegap</h3>
+        <pre><code class="language-javascript">$ phonegap build android
+</code></pre>
+      </section>
+      <section data-bespoke-state="blue">
+        <h3>Phonegap</h3>
+        <pre><code class="language-javascript">$ phonegap run android
+</code></pre>
+      </section>
+      <section data-bespoke-state="reveal">
+        <h1>Deviceready</h1>
+      </section>
+      <section data-bespoke-state="reveal">
+        <pre><code class="language-javascript">var app = {
+    // Application Constructor
+    initialize: function() {
+        this.bindEvents();
+    },
+    // Bind Event Listeners
+    //
+    // Bind any events that are required on startup. Common events are:
+    // 'load', 'deviceready', 'offline', and 'online'.
+    bindEvents: function() {
+        document.addEventListener('deviceready', this.onDeviceReady, false);
+    },
+    // deviceready Event Handler
+    //
+    // The scope of 'this' is the event. In order to call the 'receivedEvent'
+    // function, we must explicity call 'app.receivedEvent(...);'
+    onDeviceReady: function() {
+        app.receivedEvent('deviceready');
+    },
+    // Update DOM on a Received Event
+    receivedEvent: function(id) {
+        var parentElement = document.getElementById(id);
+        var listeningElement = parentElement.querySelector('.listening');
+        var receivedElement = parentElement.querySelector('.received');
+        
+        listeningElement.setAttribute('style', 'display:none;');
+        receivedElement.setAttribute('style', 'display:block;');
+        
+        console.log('Received Event: ' + id);
+    }
+};
+
+
+</code></pre>
+      </section>
+    </article>
+    <script src="scripts/scripts.js"></script>
+  </body>
+</html>
