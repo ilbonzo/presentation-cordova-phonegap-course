@@ -1,12 +1,14 @@
 # Building Mobile Applications with HTML/Js/Css and Phonegap
 
-[View the presentation online](http://matteomagni.net/presentation-phonegap-course)
+> [View the presentation online](http://matteomagni.net/presentation-phonegap-course)
 
 ## Phonegap demo
 
 Example app used for course:
 
-[Evvent](https://github.com/ilbonzo/Evvent)
+> [Evvent](https://github.com/ilbonzo/Evvent)
+
+## Slide generator
 
 > A [Bespoke.js](http://markdalgleish.com/projects/bespoke.js) presentation, built with [generator-bespoke](https://github.com/markdalgleish/generator-bespoke)
 
