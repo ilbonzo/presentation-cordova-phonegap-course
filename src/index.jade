@@ -1,0 +1,1047 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    title Building Mobile Applications with HTML/Js/Css and Phonegap
+
+    // build:css styles/styles.css
+    //- Check out 'src/bower_components/prism/themes/' for available themes
+    link(rel='stylesheet', type='text/css', href='bower_components/prism/themes/prism-tomorrow.css')
+    link(rel='stylesheet', type='text/css', href='styles/main.css')
+    // endbuild
+
+  body
+
+    article
+
+      section(data-bespoke-state='dark')(class='dark')
+        h1 Building Mobile Applications
+        span with
+        h2 HTML/Js/Css
+        span and
+        h2 Phonegap
+
+      section
+        h2 Program
+        ul
+          li Native vs Cross platform
+          li Phonegap Architecture
+          li Javascript - Css - Html
+          li jQuery Mobile
+          li Yeoman workflow for webapps
+          li Development Phonegap
+          li Phonegap build
+          li AppStore - Google Play
+
+      section
+        h2 Matteo Magni
+        h3 Twitter <a href="http://github.com/ilbonzo">@ilbonzo</a>
+        h3 Github <a href="http://twitter.com/ilbonzo">@ilbonzo</a>
+
+      section(data-bespoke-state='cross gif')
+
+      section(data-bespoke-state='multi-team png')
+
+      section(data-bespoke-state='money gif')
+
+      section(data-bespoke-state='one-team png')
+
+      section(data-bespoke-state='yeah gif')
+        h1(class='white') Yeah!
+
+      section
+        h3 Advantages
+        ul
+          li write one application
+          li support different mobile platforms and web
+          li exploit knowledge of web technologies
+          li can use sensors and native features of the phone
+          li can publish on store
+
+      section(data-bespoke-state='mmm gif')
+        h1 mmm?
+
+      section
+        h3 Disadvantages
+        ul
+          li performance
+          li lack of widget UI
+          li Identica UX on all platforms
+          li larger executable size
+
+      section(data-bespoke-state='pick-your-poison png')
+
+      section
+        h3 Alternative
+        ul
+          li PhoneGap (HTML/JS)
+            div <a href="http://phonegap.com/">http://phonegap.com</a>
+          li Appcelerator Titanium (JS)
+            div <a href="http://www.appcelerator.com/platform">http://www.appcelerator.com/platform</a>
+          li Corona SDK (lua)
+            div <a href="http://www.coronalabs.com/products/corona-sdk/">http://www.coronalabs.com/products/corona-sdk/</a>
+          li Marmalade (Visual C++)
+            div <a href="http://www.madewithmarmalade.com">http://www.madewithmarmalade.com</a>
+
+      section
+        div PhoneGap was originally developed by <strong>Nitobi</strong>, a company acquired by <strong>Adobe</strong> in 2011. After it was acquired, Nitobi donated the PhoneGap code base to the <strong>Apache Software Foundation</strong> (ASF) under the project name Cordova.
+        div Cordova is the name of the street in Vancouver where Nitobi's offices were located and where the company create the first version of framework
+
+      section(class='fight gif')
+        h1(class='black') Cordova vs Phonegap
+
+      section
+        <a href="http://phonegap.com/2012/03/19/phonegap-cordova-and-what%E2%80%99s-in-a-name/">http://phonegap.com/2012/03/19/phonegap-cordova-and-what%E2%80%99s-in-a-name</a>
+        blockquote "PhoneGap is a distribution of Apache Cordova. You can think of Apache Cordova as the engine that powers PhoneGap, similar to how WebKit is the engine that powers Chrome or Safari. <br/>(Browser geeks, please allow me the affordance of this analogy and I’ll buy you a beer later.)"
+
+      section(data-bespoke-state='green')
+        div PhoneGap is a free and open source framework that allows you to create mobile apps  with
+          br
+          em html, css and javascript.
+        div Think of PhoneGap as a web view container that is
+          br
+          em 100% width and 100% height
+
+      section
+        h3 Phonegap workflow
+        <img class="full" src="images/phonegap-workflow.png" />
+
+      section(data-bespoke-state='green')
+        h3 support platform
+        ul
+          li iOS
+          li Android
+          li Windows 8
+          li Windows Phone 7 and 8
+          li BlackBerry 5.x+
+          li WebOS
+          li Symbian
+          li Tizen
+          li Ubuntu
+
+      section(data-bespoke-state='phonegap-support png')
+
+      section
+          <div><img class="full" src="images/phonegap-architecture.jpg" /></div>
+
+      section
+        h3 platform details for simulator
+        ul
+          li Android emulator on Linux, Windows, OSx
+          li iOS only in OSx
+          li Blackberry on Windows and OSx
+          li Windows Phone on Windows
+
+      section
+        h3 Ripple
+        div Emulate app in desktop browser with Chrome extension Ripple
+
+      section(data-bespoke-state='ripple png')
+
+      section(data-bespoke-state='green')
+        h1 Html5
+
+      section(data-bespoke-state='mobile-html5 png')
+
+      section
+        HTML5
+        ul
+          li WebSQL
+          li XHR
+          li &lt;audio&gt;
+          li &lt;video&gt;
+
+      section
+        h2 Viewport
+        blockquote The viewport meta tag The viewport meta tag was introduced by Apple with iOS 1.0 and is largely supported in all the major mobile browsers. When a web page doesn't fit the size of the browser, the default behavior of a mobile browser is to scale it. The viewport meta tag is what you need in order to have control over this behavior.
+
+      section(data-bespoke-state='blue')(class='blue')
+        h2 jQuery
+        h5 "jQuery: The Write Less, Do More, JavaScript Library"
+
+      section(class='jquery-way')
+        h2 "jQuery is defintly the way"
+
+      section
+        h2 Performance
+        blockquote I use jQuery and I love it, but I will not advise the use of jQuery when building a hybrid multi-page app. Also, if the jQuery library is downloaded once, the file is parsed each time it's included in an HTML page. Performance on mobiles is crucial. If you don't seriously consider optimizing each aspect of your app, you risk losing users. Bad performance can also lead to high battery consumption.
+
+      section(data-bespoke-state='blue')(class='blue')
+        h2 Single Page Web App
+        ul
+          li
+            h3.white when
+          li frequently navigation
+          li the pages change partially
+          li critical performance
+
+      section(data-bespoke-state='dark')(class='dark')
+        h2 Optimization
+        ul
+          li
+          li use sprite css
+          li restrict access to the dom
+
+      section(data-bespoke-state='user-interface png')
+        h2 WTF???
+
+      section(data-bespoke-state='jqm gif')
+
+      section
+        h4 alternative a jQuery Mobile
+        ul
+          li <a href="http://ionicframework.com/">Ionic</a>
+          li <a href="http://www.sencha.com/products/touch/">Sencha Touch</a>
+          li <a href="http://www.kendoui.com/">Kendo UI Complete</a>
+          li <a href="http://www.appgyver.com/steroids">AppGyver’s Steroids</a>
+          li <a href="http://enyojs.com/">Enyo</a>
+          li <a href="http://topcoat.io/">TopCoat</a>
+          li <a href="http://getbootstrap.com/">Bootstrap</a>
+          li <a href="http://html5boilerplate.com/">Html5Boilerplate</a>
+          li <a href="http://foundation.zurb.com/">Foundation</a>
+
+      section
+        h3 jQuery Mobile layout
+          <div><img src="images/jquery-mobile-layout.png" /></div>
+
+      section
+        h3 Buttons
+          <div><img src="images/jquery-mobile-buttons.png" /></div>
+
+      section
+        h3 list
+          <div class="full"><img src="images/jquery-mobile-list.png" /></div>
+
+      section
+        h3 navigation
+          <div><img src="images/jquery-mobile-navigation.png" /></div>
+
+      section
+        h3 forms
+          <div><img src="images/jquery-mobile-forms.png" /></div>
+
+      section(data-bespoke-state='green')
+        h3 HTML5 Markup-driven configuration makes it easy to learn
+        h3 Data Attributes
+
+      section(data-bespoke-state='green')
+        pre
+          code.language-javascript.
+            &lt;div data-role=&quot;page&quot;&gt;
+              &lt;div data-role=&quot;header&quot;&gt;...&lt;/div&gt;
+              &lt;div role=&quot;main&quot; class=&quot;ui-content&quot;&gt;...&lt;/div&gt;
+              &lt;div data-role=&quot;footer&quot;&gt;...&lt;/div&gt;
+            &lt;/div&gt;
+
+      section
+        a(href="http://demos.jquerymobile.com/1.4.2/") http://demos.jquerymobile.com/1.4.2/
+        a(href="http://jquerymobile.com/download/") http://jquerymobile.com/download/
+
+      section(data-bespoke-state='theme png')
+
+      section(data-bespoke-state='theme-roller png')
+        ul
+          li
+          li
+            h1 Nostro tema
+
+      section
+        h2 Evvent demo app
+        h3 <a href="https://github.com/ilbonzo/Evvent">https://github.com/ilbonzo/Evvent</a>
+        <div><img class="seven" src="images/evvent-list.png" /></div>
+
+      section
+        h2 Evvent
+        ul
+          li events list
+          li event view
+          li layout
+          li ...
+          li
+            h4 develop a prototype
+
+      section(data-bespoke-state='frontend-dev png')
+        h1.class.top Frontend developer
+
+      section(data-bespoke-state='green')
+        ul
+          li code organization
+          li repetitive tasks
+          li tool and librery dependency
+
+      section
+        h2 <img class="full" src="images/backbone.png"/>
+        h4 <a href="http://backbonejs.org">backbonejs.org</a>
+        blockquote " JavaScript library with a RESTful JSON interface and is based on the model–view–presenter (MVP) application design paradigm"
+
+      section(data-bespoke-state='green')
+        h2 MV* framework
+        ul
+          li Routing
+          li Model
+          li View
+          li Template
+          li Collection
+        h3 Single page webapp
+
+      section(data-bespoke-state='green')
+        h2 Alternative
+        ul
+          li
+          li <a href="https://angularjs.org/">Angularjs</a>
+          li <a href="http://knockoutjs.com/">Knockoutjs</a>
+          li <a href="http://emberjs.com/">Emberjs</a>
+
+
+      section
+        h2 Backbonejs routing
+        hr
+        pre
+          code.language-javascript.
+            routes: {
+              '': 'home',
+              'events': 'events',
+              'events/:id': 'getEvent'
+            },
+            // Home method
+            home: function() {
+                var home = new HomeView({'el': '#content'});
+            },
+            // events method
+            events: function() {
+                var events = new EventsView({'el': '#content'});
+            },
+
+      section
+        h2 backbonejs model
+        hr
+        pre
+          code.language-javascript.
+            var EventModel = Backbone.Model.extend({
+                defaults: {
+                    id: '',
+                    title: '',
+                    date: ''
+                }
+            });
+
+      section
+        h2 backbonejs view
+        hr
+        pre
+          code.language-javascript.
+            var EventView = Backbone.View.extend({
+              template: JST['app/scripts/templates/event.ejs'],
+            });
+
+      section
+        h2 javascript template
+        <a href="https://code.google.com/p/trimpath/wiki/JavaScriptTemplates">https://code.google.com/p/trimpath/wiki/JavaScriptTemplates</a>
+        hr
+        pre
+          code.language-javascript.
+            &lt;h2&gt;Event View&lt;/h2&gt;
+            &lt;p&gt;Evento con id: <%= id %>&lt;/p&gt;
+
+      section(data-bespoke-state='nodejs gif')
+
+      section(data-bespoke-state='black')(class='black')
+        h2 package.json
+        pre
+          code.language-javascript.
+            {
+              "name": "evvent-web",
+              "version": "0.0.0",
+              "dependencies": {},
+              "devDependencies": {
+                "grunt": "~0.4.1",
+                "grunt-contrib-copy": "~0.4.0",
+                "grunt-contrib-concat": "~0.3.0",
+                "grunt-contrib-coffee": "~0.7.0",
+                "grunt-contrib-jst": "~0.5.0"
+              },
+              "engines": {
+                "node": ">=0.8.0"
+              }
+            }
+
+
+      section(data-bespoke-state='black')(class='black')
+        pre
+          code.language-javascript.
+            $ npm install
+            $ npm update
+
+      section.gif.grunt-happy.black
+        h1
+          .bullet GRUNT
+          .bullet +
+          .bullet BOWER
+          .bullet +
+          .bullet YEOMAN
+
+      section(data-bespoke-state='black')(class='black')
+        h2 Yeoman
+        span <a href="http://yeoman.io">yeoman.io</a>
+        span THE WEB'S SCAFFOLDING TOOL FOR MODERN WEBAPPS
+        pre
+          code.language-shell.
+            $ npm install -g yo
+        div
+          img(src='images/yeoman.png')
+        div This will install <strong>Grunt</strong> and Bower automatically.
+
+      section(data-bespoke-state='grunt gif')
+        h1.white Grunt
+        pre
+          code.language-javascript.
+            npm install -g grunt
+
+      section
+        h2 Gruntfile.js
+        pre
+          code.language-javascript.
+            module.exports = function (grunt) {
+              // show elapsed time at the end
+              require('time-grunt')(grunt);
+              // load all grunt tasks
+              require('load-grunt-tasks')(grunt);
+              ...
+            }
+
+      section(data-bespoke-state='grunt gif')
+        pre
+          code.language-javascript.
+            npm install -g grunt-cli
+            # grunt installato per ogni progetto
+            npm install grunt
+
+
+      section(data-bespoke-state='green')
+        h1 Grunt plugin
+        ul
+          li
+          li copy
+          li concat
+          li cssmin
+          li uglify
+
+      section
+        h2 grunt
+        pre
+          code.language-javascript.
+            $ grunt serve
+
+      section(data-bespoke-state='bower gif')
+
+      section
+        h2 bower.json
+        pre
+          code.language-javascript.
+            Bower
+            {
+              "name": "evvent-web",
+              "version": "0.0.0",
+              "dependencies": {
+                "jquery": "~1.9.0",
+                "underscore": "~1.4.3",
+                "backbone": "~1.0.0",
+                "requirejs": "~2.1.5",
+                "requirejs-text": "~2.0.5",
+                "modernizr": "~2.6.2",
+              },
+              "devDependencies": {}
+            }
+
+      section
+        h2 .bowerrc
+        pre
+          code.language-javascript.
+            {
+                "directory": "app/bower_components"
+            }
+
+      section(data-bespoke-state='dark')(class='dark')
+        h4 Example
+        <a href="https://github.com/ilbonzo/Evvent/tree/master/example">https://github.com/ilbonzo/Evvent/tree/master/example</a>
+        ul
+          li
+            h3.white Yeoman generator
+          li
+            <a href="https://github.com/bauschan/generator-jquery-mobile">github.com/bauschan/generator-jquery-mobile</a>
+            ul
+              li
+                pre
+                  code.language-javascript.
+                    npm install -g generator-jquery-mobile
+              li
+                a(href='http://evvent.dev:9001') evvent.dev:9001
+          li
+            <a href="https://github.com/yeoman/generator-backbone">github.com/yeoman/generator-backbone</a>
+            ul
+              li
+                pre
+                  code.language-javascript.
+                    npm install -g generator-backbone
+              li
+                a(href='http://evvent.dev:9002') evvent.dev:9002
+
+
+      section(data-bespoke-state='dark')(class='dark')
+        h4 Example
+        <a href="https://github.com/ilbonzo/Evvent/tree/master/example">https://github.com/ilbonzo/Evvent/tree/master/example</a>
+        ul
+          li
+            a(href='https://github.com/yeoman/generator-mobile') github.com/yeoman/generator-mobile
+            ul
+              li
+                pre
+                  code.language-javascript.
+                    npm install -g generator-mobile
+              li
+                a(href='http://evvent.dev:9003') evvent.dev:9003
+          li
+            a(href='https://www.npmjs.org/package/generator-phonegap') www.npmjs.org/package/generator-phonegap
+            ul
+              li
+                code
+                  pre.language-javascript.
+                    npm install -g generator-phonegap
+              li
+                a(href='http://evvent.dev:9004') evvent.dev:9004
+
+      section(data-bespoke-state='green')(class='green')
+        h2 Altre utility
+        ul
+          li Underscore
+          li requirejs
+          li Requirejs-text
+          li Modernizr
+
+      section
+        h2 requirejs
+        pre
+          code.language-javascript.
+            &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+                &lt;head&gt;
+                    &lt;title&gt;My Sample Project&lt;/title&gt;
+                    &lt;!-- data-main attribute tells require.js to load
+                         scripts/main.js after require.js loads. --&gt;
+                    &lt;script data-main=&quot;scripts/main&quot;
+                      src=&quot;scripts/require.js&quot;&gt;&lt;/script&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;h1&gt;My Sample Project&lt;/h1&gt;
+                &lt;/body&gt;
+            &lt;/html&gt;
+
+      section
+        h2 main.js
+        pre
+          code.language-javascript.
+            require.config({
+                shim: {
+                    underscore: {
+                        exports: '_'
+                    },
+                    ...
+                },
+                paths: {
+                    underscore: '../bower_components/underscore/underscore',
+                    ...
+                }
+            });
+
+
+      section
+        h3 Partiamo dal generator-backbone
+        <em><a href="https://github.com/yeoman/generator-backbone">https://github.com/yeoman/generator-backbone</a></em>
+        <div><img src="images/evvent-backbone-start.png"/></div>
+
+      section
+        h3 Aggiungiamo jquery mobile
+        <em><a href="https://github.com/jobrapido/jquery-mobile-bower">https://github.com/jobrapido/jquery-mobile-bower</a></em>
+        pre
+          code.language-javascript.
+            {
+              "name": "evvent-web",
+              "version": "0.0.0",
+              "dependencies": {
+                "jquery": "~1.9.0",
+                "underscore": "~1.4.3",
+                "backbone": "~1.0.0",
+                "requirejs": "~2.1.5",
+                "requirejs-text": "~2.0.5",
+                "modernizr": "~2.6.2",
+                ---
+                <strong>"jquery-mobile-bower" : "latest"</strong>
+                ---
+              },
+
+      section
+        pre
+          code.
+            $ bower update
+        <div><img class="full" src="images/bower-update.png" /></div>
+
+      section
+        h3 aggiungiamo a requirejs
+        pre
+          code.language-javascript.
+            /*global require*/
+            'use strict';
+            require.config({
+                shim: {
+                    ...
+                    jquerymobile: {
+                        deps: [
+                            'jquery'
+                        ],
+                        exports: 'jqm'
+                    }
+                },
+                paths: {
+                    ....
+                    jquerymobile:
+                    '../bower_components/jquery-mobile-bower/
+                        js/jquery.mobile-1.4.2'
+                }
+            });
+            require([
+                'backbone', 'jquerymobile'
+            ], function (Backbone) {
+                Backbone.history.start();
+            });
+
+      section
+        h3 add css and data attributes
+        pre
+          code.language-javascript.
+            # index.html
+            &lt;link rel=&quot;stylesheet&quot;
+            href=&quot;bower_components/jquery-mobile-bower/
+                    css/jquery.mobile-1.4.2.css”&gt;
+            &lt;div data-role=&quot;page&quot; data-theme=&quot;a&quot; id=&quot;index&quot;&gt;
+                &lt;div data-role=&quot;header&quot;&gt;
+                    &lt;h1&gt;Evvent&lt;/h1&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+      section(data-bespoke-state='blue')(class='blue')
+        h2 strict mode
+        <a href="http://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode">strict mode</a>
+        blockquote Converting mistakes into errors
+
+      section(data-bespoke-state='dark')(class='dark')
+        .content
+          table
+            thead
+              tr
+                td
+                  h3 Non-strict mode
+                td
+                  h3 Strict mode
+            tbody
+              tr
+                td
+                  pre
+                    code(data-language='javascript').
+                      function someSetup() {
+                        a = Math.PI;
+                      }
+                      someSetup();
+                      console.log(a);
+                      // 3.14159...
+                td
+                  pre
+                    code(data-language='javascript').
+                      "use strict";
+                      function someSetup() {
+                        a = Math.PI; // BOOM!
+                      }
+                      someSetup();
+                      console.log(a);
+              tr
+                td
+                td
+                  h4 throws ReferenceError
+                  "Strict mode forbids implicit creation of global property 'a'"
+
+      section(data-bespoke-state='dark')(class='dark')
+        .content.nofade
+          table
+            thead
+              tr
+                td
+                  h3(data-bespoke-bullet) Non-strict mode
+                  h3(data-bespoke-bullet) YOLO mode
+                td
+                  h3 Strict mode
+            tbody
+              tr
+                td
+                  pre
+                    code(data-language='javascript').
+                      function someSetup() {
+                        a = Math.PI;
+                      }
+                      someSetup();
+                      console.log(a);
+                      // 3.14159...
+                td
+                  pre
+                    code(data-language='javascript').
+                      "use strict";
+                      function someSetup() {
+                        var a = Math.PI;
+                      }
+                      someSetup();
+                      console.log(a); // BOOM!
+              tr
+                td
+                td
+                  h4 throws ReferenceError
+                  "Can't find variable: a"
+
+      section(data-bespoke-state='reveal')
+        h2 Backbone structure
+        div
+          img(src='images/backbone-structure.png')(class='seven')
+
+      section(data-bespoke-state='black')(class='black')
+        h2 Yeoman scaffolding
+        pre
+          code.language-javascript.
+            vagrant@precise64:/workspace/evvent-web$ yo backbone:router appRouter
+               create app/scripts/routes/appRouter.js
+
+      section(data-bespoke-state='black')(class='black')
+        h3.white Home
+        pre
+          code.language-javascript.
+            vagrant@precise64:/workspace/evvent-web$ yo backbone:view home
+               create app/scripts/templates/home.ejs
+               create app/scripts/views/home.js
+
+      section(data-bespoke-state='black')(class='black')
+        h3.white Event
+        pre
+          code.language-javascript.
+            vagrant@precise64:/workspace/evvent-web$ yo backbone:model event
+               create app/scripts/models/event.js
+            vagrant@precise64:/workspace/evvent-web$ yo backbone:view event
+               create app/scripts/templates/event.ejs
+               create app/scripts/views/event.js
+
+      section(data-bespoke-state='black')(class='black')
+        h3.white Events
+        pre
+          code.language-javascript.
+            vagrant@precise64:/workspace/evvent-web$ yo backbone:collection events
+               create app/scripts/collections/events.js
+            vagrant@precise64:/workspace/evvent-web$ yo backbone:view events
+               create app/scripts/templates/events.ejs
+               create app/scripts/views/events.js
+
+      section
+        h2 json for data
+        pre
+          code.language-javascript.
+            [
+              {
+                  "id": "53133a5de974d00e11e858af",
+                  "title": "Nine Inch Nails",
+                  "date": "19/09/2014",
+                  "image": "nin.jpg"
+              },
+              {
+                  "id": "53133a5de974d00e11e85eaf",
+                  "title": "Mad Season",
+                  "date": "20/10/2014",
+                  "image": "mad-season.jpg"
+              },
+            ...
+            ]
+
+      section(data-bespoke-state='reveal')
+        h2 Development PhoneGap app
+
+      section(data-bespoke-state='reveal')
+        h2 Phonegap Architecture
+        img(src='images/phonegap-architecture.jpg')(class='full')
+
+      section(data-bespoke-state='reveal')
+        h2 cli
+
+      section(data-bespoke-state='blue')(class='blue')
+        h2 Cordova Cli
+        h3
+          a(href='https://github.com/apache/cordova-cli') https://github.com/apache/cordova-cli
+          pre
+            code.language-javascript.
+              $ npm install -g cordova
+
+      section(data-bespoke-state='blue')(class='blue')
+        h2 Cordova Cli
+        pre
+          code.language-javascript.
+            $ cordova create evvent-cordova com.ilbonzo.evvent "Evvent"
+            $ cd evvent-cordova
+
+      section(data-bespoke-state='blue')(class='blue')
+        h2 Cordova Cli tree
+        div
+          img(src='images/cordova-cli.png')(class='seven')
+
+      section(data-bespoke-state='green')
+        h2 Phonegap Cli
+        h3
+          a(href='https://github.com/phonegap/phonegap-cli') https://github.com/phonegap/phonegap-cli
+          pre
+            code.language-javascript.
+              $ npm install -g phonegap
+
+      section(data-bespoke-state='green')
+        h2 Phonegap Cli
+        pre
+          code.language-javascript.
+            $ phonegap create evvent-phonegap com.ilbonzo.evvent "Evvent"
+            $ cd evvent-phonegap
+
+      section(data-bespoke-state='green')
+        h2 Phonegap Cli tree
+        div
+          img(src='images/phonegap-cli.png')(class='seven')
+
+      section(data-bespoke-state='reveal')
+        h2 Simulators
+        div
+          a(href='http://docs.phonegap.com/en/3.0.0/guide_platforms_index.md.html#Platform%20Guides') http://docs.phonegap.com/en/3.0.0/guide_platforms_index.md.html#Platform%20Guides
+
+      section(data-bespoke-state='reveal')
+        h1 iOS
+
+      section(data-bespoke-state='reveal')
+        h2 iOS
+        h3 Cordova
+        pre
+          code.language-javascript.
+            $ cordova platform add ios
+
+      section(data-bespoke-state='reveal')
+        h2 iOS
+        ul
+          li
+            pre
+              code.language-javascript.
+                $ cordova prepare  [platform...]
+          li
+            blockquote copies files into the specified platforms, or all platforms. It is then ready for building by Eclipse, Xcode, etc.
+        ul
+          li
+            pre
+              code.language-javascript.
+                $ cordova build  [<platform> [<platform> [...]]]
+          li
+            blockquote an alias for cordova prepare followed by cordova compile
+
+      section(data-bespoke-state='reveal')
+        h2 run ios project
+        blockquote Once created, you can open it from within Xcode. Double-click to open the evvent-cordova/platforms/ios/Evvent.xcodeproj file.
+
+      section(data-bespoke-state='cordova-xcode png')
+
+      section(data-bespoke-state='reveal')
+        h2 emulate
+        ul
+          li
+            pre
+              code.language-javascript.
+                $ cordova emulate [<platform> [<platform> [...]]]
+          li
+            blockquote launch emulators and deploy app to them. With no parameters emulates for all platforms added to the project, otherwise emulates for the specified platforms
+
+      section(data-bespoke-state='reveal')
+        h2 serve
+        ul
+          li
+            pre
+              code.language-javascript.
+                $ cordova serve [port]
+          li
+            blockquote launch a local web server allowing you to access each platform's www directory on the given port (default 8000).
+
+      section
+        img(src='images/cordova-serve.png')(class='seven')
+
+      section(data-bespoke-state='reveal')
+        h2 Phonegap Cli
+        h3 command
+        ul
+          li create <path>        create a phonegap project
+          li build <platform>     build the project for specific platform
+          li install <platform>   install the project on a specific platform
+          li run <platform>       build and install the projectfor specific platform
+          li platform [command]   update a platform version
+          li version              output version number
+
+      section(data-bespoke-state='reveal')
+        h2 iOS
+        h3 Phonegap
+        pre
+          code.language-javascript.
+            $ phonegap build ios
+
+      section(data-bespoke-state='reveal')
+        img(src='images/phonegap-build-ios.png')(class='full')
+
+      section(data-bespoke-state='reveal')
+        h2 serve
+        ul
+          li
+            pre
+              code.language-javascript.
+                $ phonegap serve [port]
+
+      section
+        img(src='images/phonegap-serve.png')(class='seven')
+
+      section(data-bespoke-state='green')
+        h2 ios-deploy
+        img(src="images/ios-deploy.png")(class='full')
+
+      section(data-bespoke-state='green')
+        h2 ios-deploy
+        blockquote Install and debug iPhone apps from the command line, without using Xcode
+        a(href='https://github.com/phonegap/ios-deploy') https://github.com/phonegap/ios-deploy
+        ul
+          li
+            pre
+              code.language-javascript.
+                $ npm -g install ios-deploy
+
+      section(data-bespoke-state='green')
+        h2 ios-sim
+        img(src="images/phonegap-ios-error.png")(class='full')
+
+      section(data-bespoke-state='green')
+        h2 ios-sim
+        blockquote Command-line application launcher for the iOS Simulator
+        a(href='https://github.com/phonegap/ios-sim') https://github.com/phonegap/ios-sim
+        ul
+          li
+            pre
+              code.language-javascript.
+                $ npm -g install ios-sim
+                # or
+                $ brew install ios-sim
+
+      section(data-bespoke-state='blue')(class='blue')
+        h1 Android
+
+      section(data-bespoke-state='blue')(class='blue')
+        h2 Android
+        a(href='http://docs.phonegap.com/en/3.0.0/guide_platforms_android_index.md.html#Android%20Platform%20Guide') http://docs.phonegap.com/en/3.0.0/guide_platforms_android_index.md.html#Android%20Platform%20Guide
+
+
+      section(data-bespoke-state='android-adt png')
+
+      section(data-bespoke-state='blue')(class='blue')
+        pre
+          code.language-javascript.
+            #~/.bashrc
+            export PATH=${PATH}:~/adt-bundle/sdk/platform-tools:~/adt-bundle/sdk/tools
+
+      section(data-bespoke-state='blue')(class='blue')
+        pre
+          code.language-javascript.
+            $ brew install ant
+
+      section(data-bespoke-state='blue')(class='blue')
+        h2 Android
+        h3 Cordova
+        pre
+          code.language-javascript.
+            $ cordova platform add android
+
+      section(data-bespoke-state='blue')(class='blue')
+        div eclipse new project from existing source
+
+      section(data-bespoke-state='blue')(class='blue')
+        div add adt
+
+      section(data-bespoke-state='blue')(class='blue')
+        pre
+          code.language-javascript.
+            $ cordova run android
+
+      section(data-bespoke-state='blue')
+        img(src='images/android-simulator.png')(class='full')
+
+      section(data-bespoke-state='blue')
+        h3 Phonegap
+        pre
+          code.language-javascript.
+            $ phonegap build android
+
+      section(data-bespoke-state='blue')
+        h3 Phonegap
+        pre
+          code.language-javascript.
+            $ phonegap run android
+
+      section(data-bespoke-state='reveal')
+        h1 Deviceready
+
+      section(data-bespoke-state='reveal')
+        pre
+          code.language-javascript.
+            var app = {
+                // Application Constructor
+                initialize: function() {
+                    this.bindEvents();
+                },
+                // Bind Event Listeners
+                //
+                // Bind any events that are required on startup. Common events are:
+                // 'load', 'deviceready', 'offline', and 'online'.
+                bindEvents: function() {
+                    document.addEventListener('deviceready', this.onDeviceReady, false);
+                },
+                // deviceready Event Handler
+                //
+                // The scope of 'this' is the event. In order to call the 'receivedEvent'
+                // function, we must explicity call 'app.receivedEvent(...);'
+                onDeviceReady: function() {
+                    app.receivedEvent('deviceready');
+                },
+                // Update DOM on a Received Event
+                receivedEvent: function(id) {
+                    var parentElement = document.getElementById(id);
+                    var listeningElement = parentElement.querySelector('.listening');
+                    var receivedElement = parentElement.querySelector('.received');
+
+                    listeningElement.setAttribute('style', 'display:none;');
+                    receivedElement.setAttribute('style', 'display:block;');
+
+                    console.log('Received Event: ' + id);
+                }
+            };
+
+
+
+    // build:js scripts/scripts.js
+    script(src='bower_components/bespoke.js/dist/bespoke.min.js')
+    script(src='bower_components/bespoke-keys/dist/bespoke-keys.min.js')
+    script(src='bower_components/bespoke-touch/dist/bespoke-touch.min.js')
+    script(src='bower_components/bespoke-bullets/dist/bespoke-bullets.min.js')
+    script(src='bower_components/bespoke-scale/dist/bespoke-scale.min.js')
+    script(src='bower_components/bespoke-hash/dist/bespoke-hash.min.js')
+    script(src='bower_components/bespoke-progress/dist/bespoke-progress.min.js')
+    script(src='bower_components/bespoke-state/dist/bespoke-state.min.js')
+    script(src='bower_components/bespoke-forms/dist/bespoke-forms.min.js')
+    script(src='bower_components/prism/prism.js')
+    script(src='scripts/main.js')
+    // endbuild
