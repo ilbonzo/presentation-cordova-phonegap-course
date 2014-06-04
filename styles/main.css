@@ -54,6 +54,9 @@ article.bespoke-parent.dark {
 article.bespoke-parent.blue {
   background: #0769ad;
 }
+article.bespoke-parent.blue h3 {
+  color: #fff;
+}
 article.bespoke-parent.gray {
   background: #bfbdbf;
 }

@@ -691,7 +691,7 @@ console.log(a); // BOOM!</code></pre>
       </section>
       <section data-bespoke-state="black" class="black">
         <h2>Yeoman scaffolding</h2>
-        <pre><code class="language-javascript">vagrant@precise64:/workspace/evvent-web$ yo backbone:router appRouter
+        <pre><code class="language-javascript">vagrant@precise64:/workspace/evvent-web$ yo backbone:router app
    create app/scripts/routes/appRouter.js
    </code></pre>
       </section>
@@ -830,47 +830,6 @@ $ cd evvent-phonegap
           </li>
         </ul>
       </section>
-      <section data-bespoke-state="reveal">
-        <h2>serve</h2>
-        <ul>
-          <li>
-            <pre><code class="language-javascript">$ cordova serve [port]</code></pre>
-          </li>
-          <li>
-            <blockquote>launch a local web server allowing you to access each platform's www directory on the given port (default 8000).</blockquote>
-          </li>
-        </ul>
-      </section>
-      <section><img src="images/cordova-serve.png" class="seven"></section>
-      <section data-bespoke-state="reveal">
-        <h2>Phonegap Cli</h2>
-        <h3>command</h3>
-        <ul>
-          <li>create <path>        create a phonegap project</li>
-          <li>build <platform>     build the project for specific platform</li>
-          <li>install <platform>   install the project on a specific platform</li>
-          <li>run <platform>       build and install the projectfor specific platform</li>
-          <li>platform [command]   update a platform version</li>
-          <li>version              output version number</li>
-        </ul>
-      </section>
-      <section data-bespoke-state="reveal">
-        <h2>iOS</h2>
-        <h3>Phonegap</h3>
-        <pre><code class="language-javascript">$ phonegap build ios
-</code></pre>
-      </section>
-      <section data-bespoke-state="reveal"><img src="images/phonegap-build-ios.png" class="full"></section>
-      <section data-bespoke-state="reveal">
-        <h2>serve</h2>
-        <ul>
-          <li>
-            <pre><code class="language-javascript">$ phonegap serve [port]
-</code></pre>
-          </li>
-        </ul>
-      </section>
-      <section><img src="images/phonegap-serve.png" class="seven"></section>
       <section data-bespoke-state="green">
         <h2>ios-deploy</h2><img src="images/ios-deploy.png" class="full">
       </section>
@@ -899,6 +858,47 @@ $ brew install ios-sim
           </li>
         </ul>
       </section>
+      <section data-bespoke-state="reveal">
+        <h2>serve</h2>
+        <ul>
+          <li>
+            <pre><code class="language-javascript">$ cordova serve [port]</code></pre>
+          </li>
+          <li>
+            <blockquote>launch a local web server allowing you to access each platform's www directory on the given port (default 8000).</blockquote>
+          </li>
+        </ul>
+      </section>
+      <section><img src="images/cordova-serve.png" class="seven"></section>
+      <section data-bespoke-state="reveal">
+        <h2>Phonegap Cli</h2>
+        <h3>command</h3>
+        <ul>
+          <li>create &lt;path&gt;        create a phonegap project</li>
+          <li>build &lt;platform&gt;     build the project for specific platform</li>
+          <li>install &lt;platform&gt;   install the project on a specific platform</li>
+          <li>run &lt;platform&gt;       build and install the projectfor specific platform</li>
+          <li>platform [command]   update a platform version</li>
+          <li>version              output version number</li>
+        </ul>
+      </section>
+      <section data-bespoke-state="reveal">
+        <h2>iOS</h2>
+        <h3>Phonegap</h3>
+        <pre><code class="language-javascript">$ phonegap build ios
+</code></pre>
+      </section>
+      <section data-bespoke-state="reveal"><img src="images/phonegap-build-ios.png" class="full"></section>
+      <section data-bespoke-state="reveal">
+        <h2>serve</h2>
+        <ul>
+          <li>
+            <pre><code class="language-javascript">$ phonegap serve [port]
+</code></pre>
+          </li>
+        </ul>
+      </section>
+      <section><img src="images/phonegap-serve.png" class="seven"></section>
       <section data-bespoke-state="blue" class="blue">
         <h1>Android</h1>
       </section>
@@ -940,44 +940,6 @@ export PATH=${PATH}:~/adt-bundle/sdk/platform-tools:~/adt-bundle/sdk/tools
       <section data-bespoke-state="blue">
         <h3>Phonegap</h3>
         <pre><code class="language-javascript">$ phonegap run android
-</code></pre>
-      </section>
-      <section data-bespoke-state="reveal">
-        <h1>Deviceready</h1>
-      </section>
-      <section data-bespoke-state="reveal">
-        <pre><code class="language-javascript">var app = {
-    // Application Constructor
-    initialize: function() {
-        this.bindEvents();
-    },
-    // Bind Event Listeners
-    //
-    // Bind any events that are required on startup. Common events are:
-    // 'load', 'deviceready', 'offline', and 'online'.
-    bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
-    },
-    // deviceready Event Handler
-    //
-    // The scope of 'this' is the event. In order to call the 'receivedEvent'
-    // function, we must explicity call 'app.receivedEvent(...);'
-    onDeviceReady: function() {
-        app.receivedEvent('deviceready');
-    },
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-        
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-        
-        console.log('Received Event: ' + id);
-    }
-};
-
 
 </code></pre>
       </section>
