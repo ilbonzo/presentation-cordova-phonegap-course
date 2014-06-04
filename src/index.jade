@@ -714,7 +714,7 @@ html
         h2 Yeoman scaffolding
         pre
           code.language-javascript.
-            vagrant@precise64:/workspace/evvent-web$ yo backbone:router appRouter
+            vagrant@precise64:/workspace/evvent-web$ yo backbone:router app
                create app/scripts/routes/appRouter.js
 
       section(data-bespoke-state='black')(class='black')
@@ -863,51 +863,6 @@ html
           li
             blockquote launch emulators and deploy app to them. With no parameters emulates for all platforms added to the project, otherwise emulates for the specified platforms
 
-      section(data-bespoke-state='reveal')
-        h2 serve
-        ul
-          li
-            pre
-              code.language-javascript.
-                $ cordova serve [port]
-          li
-            blockquote launch a local web server allowing you to access each platform's www directory on the given port (default 8000).
-
-      section
-        img(src='images/cordova-serve.png')(class='seven')
-
-      section(data-bespoke-state='reveal')
-        h2 Phonegap Cli
-        h3 command
-        ul
-          li create <path>        create a phonegap project
-          li build <platform>     build the project for specific platform
-          li install <platform>   install the project on a specific platform
-          li run <platform>       build and install the projectfor specific platform
-          li platform [command]   update a platform version
-          li version              output version number
-
-      section(data-bespoke-state='reveal')
-        h2 iOS
-        h3 Phonegap
-        pre
-          code.language-javascript.
-            $ phonegap build ios
-
-      section(data-bespoke-state='reveal')
-        img(src='images/phonegap-build-ios.png')(class='full')
-
-      section(data-bespoke-state='reveal')
-        h2 serve
-        ul
-          li
-            pre
-              code.language-javascript.
-                $ phonegap serve [port]
-
-      section
-        img(src='images/phonegap-serve.png')(class='seven')
-
       section(data-bespoke-state='green')
         h2 ios-deploy
         img(src="images/ios-deploy.png")(class='full')
@@ -937,6 +892,51 @@ html
                 $ npm -g install ios-sim
                 # or
                 $ brew install ios-sim
+
+      section(data-bespoke-state='reveal')
+        h2 serve
+        ul
+          li
+            pre
+              code.language-javascript.
+                $ cordova serve [port]
+          li
+            blockquote launch a local web server allowing you to access each platform's www directory on the given port (default 8000).
+
+      section
+        img(src='images/cordova-serve.png')(class='seven')
+
+      section(data-bespoke-state='reveal')
+        h2 Phonegap Cli
+        h3 command
+        ul
+          li create &lt;path&gt;        create a phonegap project
+          li build &lt;platform&gt;     build the project for specific platform
+          li install &lt;platform&gt;   install the project on a specific platform
+          li run &lt;platform&gt;       build and install the projectfor specific platform
+          li platform [command]   update a platform version
+          li version              output version number
+
+      section(data-bespoke-state='reveal')
+        h2 iOS
+        h3 Phonegap
+        pre
+          code.language-javascript.
+            $ phonegap build ios
+
+      section(data-bespoke-state='reveal')
+        img(src='images/phonegap-build-ios.png')(class='full')
+
+      section(data-bespoke-state='reveal')
+        h2 serve
+        ul
+          li
+            pre
+              code.language-javascript.
+                $ phonegap serve [port]
+
+      section
+        img(src='images/phonegap-serve.png')(class='seven')
 
       section(data-bespoke-state='blue')(class='blue')
         h1 Android
@@ -991,45 +991,6 @@ html
         pre
           code.language-javascript.
             $ phonegap run android
-
-      section(data-bespoke-state='reveal')
-        h1 Deviceready
-
-      section(data-bespoke-state='reveal')
-        pre
-          code.language-javascript.
-            var app = {
-                // Application Constructor
-                initialize: function() {
-                    this.bindEvents();
-                },
-                // Bind Event Listeners
-                //
-                // Bind any events that are required on startup. Common events are:
-                // 'load', 'deviceready', 'offline', and 'online'.
-                bindEvents: function() {
-                    document.addEventListener('deviceready', this.onDeviceReady, false);
-                },
-                // deviceready Event Handler
-                //
-                // The scope of 'this' is the event. In order to call the 'receivedEvent'
-                // function, we must explicity call 'app.receivedEvent(...);'
-                onDeviceReady: function() {
-                    app.receivedEvent('deviceready');
-                },
-                // Update DOM on a Received Event
-                receivedEvent: function(id) {
-                    var parentElement = document.getElementById(id);
-                    var listeningElement = parentElement.querySelector('.listening');
-                    var receivedElement = parentElement.querySelector('.received');
-
-                    listeningElement.setAttribute('style', 'display:none;');
-                    receivedElement.setAttribute('style', 'display:block;');
-
-                    console.log('Received Event: ' + id);
-                }
-            };
-
 
 
     // build:js scripts/scripts.js
