@@ -667,7 +667,7 @@ html
                 td
                 td
                   h4 throws ReferenceError
-                  "Strict mode forbids implicit creation of global property 'a'"
+                  span "Strict mode forbids implicit creation of global property 'a'"
 
       section(data-bespoke-state='dark')(class='dark')
         .content.nofade
@@ -703,7 +703,7 @@ html
                 td
                 td
                   h4 throws ReferenceError
-                  "Can't find variable: a"
+                  span "Can't find variable: a"
 
       section(data-bespoke-state='reveal')
         h2 Backbone structure
@@ -764,6 +764,18 @@ html
               },
             ...
             ]
+
+
+      section
+        h2 json for single event
+        pre
+          code.language-javascript.
+            {
+                "id": "53133a5de974d00e11e858af",
+                "title": "Nine Inch Nails",
+                "date": "19/09/2014",
+                "image": "nin.jpg"
+            }
 
       section(data-bespoke-state='reveal')
         h2 Development PhoneGap app
@@ -967,10 +979,12 @@ html
             $ cordova platform add android
 
       section(data-bespoke-state='blue')(class='blue')
-        div eclipse new project from existing source
+        h3 Create eclipse new project from existing source
+        img.seven(src='images/create-new-project.png')
 
       section(data-bespoke-state='blue')(class='blue')
-        div add adt
+        h3 Android virtual device manager
+        img.seven(src='images/android-device-manager.png')
 
       section(data-bespoke-state='blue')(class='blue')
         pre
@@ -992,6 +1006,726 @@ html
           code.language-javascript.
             $ phonegap run android
 
+      section
+        h2 Continue Evvent
+          h3 <a href="https://github.com/ilbonzo/Evvent">https://github.com/ilbonzo/Evvent</a>
+          <div><img class="seven" src="images/evvent-list.png" /></div>
+
+      section(data-bespoke-state='reveal')
+        h1 Remote Api
+
+      section(data-bespoke-state='reveal')
+        img.seven(src='images/foaas.png')
+
+      section(data-bespoke-state='songkick png')
+
+      section(data-bespoke-state='reveal')
+        h3 Songkick Event
+        img.seven(src='images/songkick-event.png')
+
+      section(data-bespoke-state='reveal')
+        h2 Cross Site scripting
+        p "Chrome Security Restriction If you need to test your JSON calls from a local web app"
+        li
+          p OSX
+          pre
+            code.language-javascript.
+              open ‐a Google Chrome.app --args "--disable‐web‐security" 
+        li
+          p Windows
+          pre
+            code.language-javascript.
+              Windows chrome.exe  -­‐disable‐web‐security
+
+      section(data-bespoke-state='reveal')
+        h2 jsonp
+        a(href="http://en.wikipedia.org/wiki/JSONP") http://en.wikipedia.org/wiki/JSONP
+        pre
+          code.language-javascript.
+            // url request
+            http://pippo.com/evvent/1234?jsonp=jsonCallback
+            // response
+            jsonCallback({"Title": "Foo", "Id": 1234});
+
+      section(data-bespoke-state='reveal')
+        h2 Backbone jsonp
+        pre
+          code.language-javascript.
+            sync: function(method, model, options){
+                options.dataType = 'jsonp';
+                return Backbone.sync(method, model, options);
+            },
+
+      section(data-bespoke-state='reveal')
+        h2 Backbone use jQuery callback jsonp
+        pre
+          code.language-javascript.
+            url: url + 'events.json?... + '&jsoncallback=?',
+
+      section(data-bespoke-state='reveal')
+        h2 Cors
+        h4 Cross-origin resource sharing
+        pre
+          code.language-javascript.
+            # http header
+            Access-Control-Allow-Origin: *
+
+      section(data-bespoke-state='reveal')
+        h2 config.xml
+        blockquote Many aspects of an application's behavior can be controlled with a platform-agnostic configuration file, config.xml, which is formatted based on the W3C's Packaged Web Apps (Widgets) specification.
+
+      section(data-bespoke-state='reveal')
+        h4 Cordova
+        pre
+          code.language-javascript.
+            &lt;?xml version='1.0' encoding='utf-8'?&gt;
+            &lt;widget id=&quot;com.ilbonzo.evvent-c&quot;
+              version=&quot;0.0.1&quot;
+              xmlns=&quot;http://www.w3.org/ns/widgets&quot;
+              xmlns:cdv=&quot;http://cordova.apache.org/ns/1.0&quot;&gt;
+                &lt;name&gt;Evvent Cordova&lt;/name&gt;
+                &lt;description&gt;
+                    A sample Apache Cordova application that responds
+                    to the deviceready event.
+                &lt;/description&gt;
+                &lt;author email=&quot;dev@cordova.apache.org&quot;
+                href=&quot;http://cordova.io&quot;&gt;
+                    Apache Cordova Team
+                &lt;/author&gt;
+                &lt;content src=&quot;index.html&quot; /&gt;
+                &lt;access origin=&quot;*&quot; /&gt;
+            &lt;/widget&gt;
+
+      section(data-bespoke-state='reveal')
+        h4 Phonegap
+        br
+        pre
+          code.language-javascript.
+            &lt;?xml version='1.0' encoding='utf-8'?&gt;
+            &lt;widget id=&quot;com.ilbonzo.evvent-p&quot;
+              version=&quot;1.0.0&quot;
+              xmlns=&quot;http://www.w3.org/ns/widgets&quot;
+              xmlns:gap=&quot;http://phonegap.com/ns/1.0&quot;&gt;
+                &lt;name&gt;Evvent Phonegap&lt;/name&gt;
+                &lt;description&gt;
+                    Hello World sample application that
+                    responds to the deviceready event.
+                &lt;/description&gt;
+                &lt;author email=&quot;support@phonegap.com&quot;
+                  href=&quot;http://phonegap.com&quot;&gt;
+                    PhoneGap Team
+                &lt;/author&gt;
+                &lt;feature name=&quot;http://api.phonegap.com/1.0/device&quot; /&gt;
+                &lt;preference name=&quot;permissions&quot; value=&quot;none&quot; /&gt;
+                ...
+                &lt;icon src=&quot;icon.png&quot; /&gt;
+                &lt;icon gap:density=&quot;ldpi&quot; gap:platform=&quot;android&quot;
+                src=&quot;res/icon/android/icon-36-ldpi.png&quot; /&gt;
+                ...
+                &lt;gap:splash gap:density=&quot;ldpi&quot; gap:platform=&quot;android&quot;
+                src=&quot;res/screen/android/screen-ldpi-portrait.png&quot; /&gt;
+                ...
+                &lt;access origin=&quot;http://127.0.0.1*&quot; /&gt;
+            &lt;/widget&gt;
+
+      section
+        h3 Core elements
+        pre
+          code.language-javascript.
+            &lt;widget id=&quot;com.example.hello&quot;
+              version=&quot;0.0.1&quot;&gt;
+                &lt;name&gt;HelloWorld&lt;/name&gt;
+                &lt;description&gt;
+                    A sample Apache Cordova application that
+                    responds to the deviceready event.
+                &lt;/description&gt;
+                &lt;author email=&quot;dev@callback.apache.org&quot;
+                href=&quot;http://phonegap.com&quot;&gt;
+                    Apache Cordova Team
+                &lt;/author&gt;
+                &lt;content src=&quot;index.html&quot; /&gt;
+                &lt;access origin=&quot;*&quot; /&gt;
+            &lt;/widget&gt;
+
+      section
+        ul
+          li The <strong>&lt;widget&gt;</strong> element's id attribute provides the app's reverse-domain identifier, and the version its full version number expressed in major/minor/patch notation.
+          li The <strong>&lt;name&gt;</strong> element specifies the app's formal name, as it appears on the device's home screen and within app-store interfaces.
+          li The <strong>&lt;description&gt;</strong> and <strong>&lt;author&gt;</strong> elements specify metadata and contact information that may appear within app-store listings.
+          li The optional <strong>&lt;content&gt;</strong> element defines the app's starting page in the top-level web assets directory. The default value is index.html, which customarily appears in a project's top-level www directory.
+          li <strong>&lt;access&gt;</strong> elements define the set of external domains the app is allowed to communicate with. The default value shown above allows it to access any server. See the Domain Whitelist Guide for details.
+          li The <strong>&lt;preference&gt;</strong> tag sets various options as pairs of name/value attributes. Each preference's name is case-insensitive. Many preferences are unique to specific platforms, as listed at the top of this page. The following sections detail preferences that apply to more than one platform.
+
+      section(data-bespoke-state='green')
+        h2 app/config.xml
+        blockquote Note that before version 3.3.1-0.2.0, the file existed at app/www/config.xml, and that having it here is still supported.
+
+      section
+        h2 cordova cli multiple version
+        pre
+          code.language-javascript.
+            $ mkdir cordova3.1
+            $ cd cordova3.1
+            $ npm view cordova
+            $ npm install cordova@3.1.0-0.2.0
+            $ alias cordova31=
+              '/path/to/cordova3.1/node_modules/cordova/bin/cordova'
+            $ cordova31 -v
+              3.1.0-0.2.0
+
+       section
+        h2 phonegap cli multiple version
+        pre
+          code.language-javascript.
+            $ mkdir phonegap3.1
+            $ cd phonegap3.1
+            $ npm view phonegap
+            $ npm install phonegap@3.1.0-0.15.0
+            $ alias phonegap31=
+              '/path/to/phonegap3.1/node_modules/phonegap/bin/phonegap'
+            $ phonegap31 -v
+              3.1.0-0.15.0
+
+      section
+        h2 Cordova Compile
+        h4 android
+        pre
+          code.language-javascript.
+            $ cordova compile --debug
+            $ ls platforms/android/bin/EvventCordova-debug-unsigned.apk
+            $ cordova compile --release
+            $ ls platforms/android/bin/EvventCordova-release-unsigned.apk
+
+      section
+        h2 Phonegap build
+        h4 android
+        pre
+          code.language-javascript.
+            $ phonegap local build android
+            $ phonegap remote build android
+
+      section(data-bespoke-state='cross gif')
+        h1 Debug sucks
+
+      section(data-bespoke-state='blue')
+        h1 Google Chrome
+
+      section(data-bespoke-state='reveal')
+        h2 Simulator
+        ul
+          li PRO
+          li Simulator Ofﬁcially supported by platform vendors
+          li You use the "real" device's browser
+          li CONS
+          li device's performance is not considered
+          li this is iOS-speciﬁc
+          li Android's emulator is a joke
+          li device's capabilities are only simulated
+
+      section(data-bespoke-state='reveal')
+        h2 On device
+        ul
+          li PRO
+          li real performance tests
+          li real browser tests
+          li CONS
+          li Deployment takes some time
+
+      section(data-bespoke-state='reveal')
+        h2 Ripple
+        a(href="http://emulate.phonegap.com/") http://emulate.phonegap.com/
+        h4 Emulate app in desktop browser with Chrome extension Ripple
+
+      section(data-bespoke-state='reveal')
+        h2 PhoneGap Emulator
+        p The PhoneGap Emulator allows you to test your PhoneGap application from your desktop browser. PhoneGap's JavaScript APIs are avaialble using Ripple, so you can subscribe to deviceready and even stub responses for your custom plugins.
+
+      section(data-bespoke-state='reveal')
+        h4 The PhoneGap Emulator requires two free, third-party tools.
+        ul
+          li
+          li Google Chrome Browser by Google.
+          li Ripple Emulation Environment by the BlackBerry HTML Team.
+          li
+            pre
+              code.language-javascript.
+                $ npm install -g ripple-emulator
+                $ ripple emulate
+
+      section(data-bespoke-state='reveal')
+        h3 The PhoneGap emulator can be invoked with a web request.
+        p The request options are provided as query string parameters and the response will check for all dependencies before opening the Ripple emulator.
+        pre
+          code.language-javascript.
+            // Request
+            http://emulate.phonegap.com?url=[url]&platform=[platform]
+
+      section(data-bespoke-state='green')
+        h2 phonegap-desktop
+        a(href="https://github.com/jxp/phonegap-desktop") https://github.com/jxp/phonegap-desktop
+
+      section(data-bespoke-state='dark')(class='dark')
+        h2 Development workﬂow
+        ul
+          li
+          li Code & test using Chrome and Ripple
+          li Run and debug in the XCode simulator
+          li Run and debug in the Android simulator
+          li Run and debug on devices
+
+      section
+        h2 Evvent demo app
+        h3 Add and use release/build task for web and phonegap
+
+      section(data-bespoke-state='green')
+        h2 build application
+        pre
+          code.language-javascript.
+            // build application to dist folder
+            $ grunt build
+
+      section(data-bespoke-state='green')
+        h2 grunt build
+        pre
+          code.language-javascript.
+            grunt.registerTask('build', [
+              'clean:dist',
+              'coffee',
+              'createDefaultTemplate',
+              'jst',
+              'useminPrepare',
+              'requirejs',
+              // 'imagemin',
+              'htmlmin',
+              'concat',
+              'cssmin',
+              'uglify',
+              'copy',
+              // data
+              'copy:data',
+              'copy:cssimage',
+              'rev',
+              'usemin'
+            ]);
+
+      section(data-bespoke-state='green')
+        h2 Test build application
+        pre
+          code.language-javascript.
+            // run server on dist folder
+            $ grunt serve:dist
+
+      section(data-bespoke-state='green')
+        h2 Add phonegap to evvent
+        img.full(src='images/evvent-phonegap-tree.png')
+
+      section(data-bespoke-state='green')
+        h2 grunt phonegap
+        pre
+          code.language-javascript.
+            // phonegap
+            grunt.registerTask('phonegap', function (target) {
+                grunt.task.run([
+                    'build',
+                    'clean:phonegap',
+                    'copy:phonegap'
+                ]);
+            });
+
+      section(data-bespoke-state='reveal')
+        h2 Events Api
+        ul
+          li
+          li
+            em deviceready
+            li The event fires when Cordova/Phonegap is fully loaded.
+          li
+            em pause
+            li The pause event fires when the native platform puts the application into the background, typically when the user switches to a different application.
+          li
+            em resume
+            li The event fires when an application is retrieved from the background.
+          li
+            em backbutton
+            li The event fires when the user presses the back button. (not iOS)
+          li
+            em menubutton
+            li The event fires when the user presses the menu button. (not iOS)
+
+      section(data-bespoke-state='reveal')
+        h2 Events Api
+        ul
+          li
+          li
+            em searchbutton
+            li The event fires when the user presses the search button on Android.
+          li
+            em startcallbutton
+            li The event fires when the user presses the start call button. (Blackberry)
+          li
+            em endcallbutton
+            li This event fires when the user presses the end call button. (Blackberry)
+          li
+            em volumedownbutton
+            li The event fires when the user presses the volume down button. (Blackberry)
+          li
+            em volumeupbutton
+            li The event fires when the user presses the volume up button. (Blackberry)
+
+      section(data-bespoke-state='reveal')
+        h1 Deviceready
+
+      section(data-bespoke-state='reveal')
+        pre
+          code.language-javascript.
+            var app = {
+                // Application Constructor
+                initialize: function() {
+                    this.bindEvents();
+                },
+                // Bind any events that are required on startup.
+                // Common events are:
+                // 'load', 'deviceready', 'offline', and 'online'.
+                bindEvents: function() {
+                    document.addEventListener(
+                      'deviceready',
+                      this.onDeviceReady,
+                      false
+                    );
+                },
+                ...
+            };
+
+      section(data-bespoke-state='reveal')
+        pre
+          code.language-javascript.
+            var app = {
+                ...
+                // deviceready Event Handler
+                //
+                // The scope of 'this' is the event.
+                In order to call the 'receivedEvent'
+                // function, we must explicity call 'app.receivedEvent(...);'
+                onDeviceReady: function() {
+                    app.receivedEvent('deviceready');
+                },
+                // Update DOM on a Received Event
+                receivedEvent: function(id) {
+                    ...
+                    console.log('Received Event: ' + id);
+                }
+            };
+
+
+      section(data-bespoke-state='green')
+        h2 Add deviceready to evvent
+
+      section(data-bespoke-state='reveal')
+        h1 Plugins
+
+      section(data-bespoke-state='reveal')
+        ul
+          li
+            em Battery Status
+            li Monitor the status of the device's battery.
+          li
+            em Camera
+            li Capture a photo using the device's camera.
+          li
+            em Contacts
+            li Work with the devices contact database.
+          li
+            em Device
+            li Gather device specific information.
+          li
+            em Device Motion (Accelerometer)
+            li Tap into the device's motion sensor.
+          li
+            em Device Orientation (Compass)
+            li Obtain the direction that the device is pointing.
+
+      section(data-bespoke-state='reveal')
+        ul
+          li
+            em Dialogs
+            li Visual device notifications.
+          li
+            em FileSystem
+            li Hook into native file system through JavaScript.
+          li
+            em File Transfer
+            li Hook into native file system through JavaScript.
+          li
+            em Geolocation
+            li Make your application location aware.
+          li
+            em Globalization
+            li Enable representation of objects specific to a locale.
+          li
+            em InAppBrowser
+            li Launch URLs in another in-app browser instance.
+
+      section(data-bespoke-state='reveal')
+        ul
+          li
+            em Media
+            li Record and play back audio files.
+          li
+            em Media Capture
+            li Capture media files using device's media capture applications.
+          li
+            em Network Information (Connection)
+            li Quickly check the network state, and cellular network information.
+          li
+            em Splashscreen
+            li Show and hide the applications splash screen.
+          li
+            em Vibration
+            li An API to vibrate the device.
+
+      section
+        h2 Device Motion
+        a(href="http://docs.phonegap.com/en/edge/cordova_accelerometer_accelerometer.md.html#Accelerometer") Accelerometer
+        a(href="https://github.com/apache/cordova-plugin-device-motion") cordova-plugin-device-motion
+        blockquote This plugin provides access to the device's accelerometer. The accelerometer is a motion sensor that detects the change (delta) in movement relative to the current device orientation, in three dimensions along the x, y, and z axis.
+
+      section
+        pre
+          code.language-javascript.
+            $ cordova plugin add org.apache.cordova.device-motion
+
+      section
+        h3 supported platform
+        ul
+          li Amazon Fire OS
+          li Android
+          li BlackBerry 10
+          li Firefox OS
+          li iOS
+          li Tizen
+          li Windows Phone 7 and 8
+          li Windows 8
+
+      section
+        h3
+        pre
+          code.language-javascript.
+            function onSuccess(acceleration) {
+                alert('Acceleration X: ' + acceleration.x + '\n' +
+                      'Acceleration Y: ' + acceleration.y + '\n' +
+                      'Acceleration Z: ' + acceleration.z + '\n' +
+                      'Timestamp: '      + acceleration.timestamp + '\n');
+            };
+
+            function onError() {
+                alert('onError!');
+            };
+
+            navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
+
+      section
+        ul
+          li x (Number): Amount of acceleration on the x-axis. (in m/s^2)
+          li y (Number): Amount of acceleration on the y-axis. (in m/s^2)
+          li z (Number): Amount of acceleration on the z-axis. (in m/s^2)
+          li timestamp (DOMTimestamp): Creation timestamp in milliseconds
+
+      section
+        h2 iOS Quirks
+        ul
+          li iOS doesn't recognize the concept of getting the current acceleration at any given point.
+          li You must watch the acceleration and capture the data at given time intervals.
+          li Thus, the getCurrentAcceleration function yields the last value reported from a watchAccelerometer call.
+
+      section
+        pre
+          code.language-javascript.
+            $ cordova create accelerometer-phonegap
+              com.ilbonzo.accelerometer-phonegap "Accelerometer Phonegap"
+            $ cd accelerometer
+            $ cordova platform add ios
+            $ cordova plugin add org.apache.cordova.device-motion
+            $ cordova plugin add org.apache.cordova.console
+
+      section(data-bespoke-state='accelerometer-demo png')
+        h2
+        a(href="https://github.com/ilbonzo/Evvent/tree/master/example/accelerometer-phonegap") https://github.com/ilbonzo/Evvent/tree/master/example/accelerometer-phonegap
+
+      section(data-bespoke-state='dark')(class='dark')
+        pre
+          code.language-javascript.
+            $ tail -f platforms/ios/cordova/console.log
+
+      section(data-bespoke-state='dark')(class='dark')
+        blockquote plugin for console.log to work in the xcode console.
+        pre
+          code.language-javascript.
+            cordova plugin add
+              https://git-wip-us.apache.org/repos/asf/cordova-plugin-console.git
+
+      section(data-bespoke-state='dark')(class='dark')
+        h2 plugin list
+        pre
+          code.language-javascript.
+            $ cordova plugin ls
+            [ 'org.apache.cordova.console',
+              'org.apache.cordova.device-motion' ]
+
+
+      section
+        h2 Compass
+        pre
+          code.language-javascript.
+            $ phonegap local plugin add org.apache.cordova.device-orientation
+
+      section
+        h3
+        pre
+          code.language-javascript.
+            function onSuccess(heading) {
+                alert('heading: ' + heading.magneticHeading);
+            };
+
+            function onError() {
+                alert('onError!');
+            };
+
+            navigator.compass.getCurrentHeading(onSuccess, onError);
+
+      section
+        h2 iOS Quirks
+        p Only one watchHeading can be in effect at one time in iOS. If a watchHeading uses a filter, calling getCurrentHeading or watchHeading uses the existing filter value to specify heading changes. Watching heading changes with a filter is more efficient than with time intervals.
+
+      section(data-bespoke-state='blue')(class='blue')
+        h2 Geolocation
+        p This plugin provides information about the device's location, such as latitude and longitude. Common sources of location information include Global Positioning System (GPS) and location inferred from network signals such as IP address, RFID, WiFi and Bluetooth MAC addresses, and GSM/CDMA cell IDs. There is no guarantee that the API returns the device's actual location.
+        p This API is based on the W3C Geolocation API Specification, and only executes on devices that don't already provide an implementation.
+
+      section(data-bespoke-state='blue')(class='blue')
+        h2 Maps demo
+        pre
+          code.language-javascript.
+            $ phonegap local plugin add
+              https://git-wip-us.apache.org/repos/
+              asf/cordova-plugin-device-motion.git
+            $ phonegap local plugin add
+              https://git-wip-us.apache.org/repos/
+              asf/cordova-plugin-device-orientation.git
+            $ phonegap local plugin add
+              https://git-wip-us.apache.org/repos/
+              asf/cordova-plugin-geolocation.git
+
+      section(data-bespoke-state='blue')(class='blue')
+        pre
+          code.language-javascript.
+            navigator.geolocation.getCurrentPosition(
+              app.onSuccessGeolocation,
+              app.onErrorGeolocation
+            );
+
+      section(data-bespoke-state='blue')(class='blue')
+        pre
+          code.language-javascript.
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+            var latLng = new google.maps.LatLng(latitude, longitude);
+            var mapOptions = {
+                center: latLng,
+                zoom: 16,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+      // @TODO
+      //- section(data-bespoke-state='google-maps-api png')(class='black')
+      //-   h2 browser keys
+      //-   h3
+      //-     a(href='https://code.google.com/apis/console') https://code.google.com/apis/console
+
+      section(data-bespoke-state='demo-maps png')
+        h4
+          a(href="https://github.com/ilbonzo/Evvent/tree/master/example/maps") https://github.com/ilbonzo/Evvent/tree/master/example/maps
+
+      section(data-bespoke-state='green')
+        h1 An overview of storage options for Cordova/Phonegap.
+
+      section(data-bespoke-state='green')
+        h2 LocalStorage
+        p Also known as web storage, simple storage, or by its alternate session storage interface, this API provides synchronous key/value pair storage, and is available in underlying WebView implementations. Refer to the W3C spec for details.
+        p Windows Phone 7 Quirk: Dot notation is not available, so be sure to use setItem or getItem rather than access keys directly from the storage object, as in window.localStorage.someKey.
+
+      section(data-bespoke-state='green')
+        h2 WebSQL
+        p This API is available in the underlying WebView. The Web SQL Database Specification offers more full-featured database tables accessed via SQL queries.
+        p The following platforms support WebSQL:
+        ul
+          li
+          li Android
+          li BlackBerry 10
+          li iOS
+          li Tizen
+
+      section(data-bespoke-state='green')
+        h2 IndexedDB
+        p This API is available in the underlying WebView. Indexed DB offers more features than LocalStorage but fewer than WebSQL.
+        p The following platforms support IndexedDB:
+        ul
+          li
+          li Windows Phone 8
+          li BlackBerry 10
+
+      section(data-bespoke-state='green')
+        pre
+          code.language-javascript.
+            db = window.openDatabase('evvent', '1.0', 'Evvent', 5242880);
+            db.transaction(runTransaction, onError, onSuccess);
+            function runTransaction(t){
+                // t.executeSql('DROP TABLE events');
+                t.executeSql('CREATE TABLE IF NOT EXISTS events (name unique)');
+            }
+
+      section(data-bespoke-state='blue')
+        img(src='images/websql-1.png')(class='seven')
+
+      section(data-bespoke-state='blue')
+        img(src='images/websql-2.png')(class='seven')
+
+      section(data-bespoke-state='green')
+        h2 Add maps to evvent
+
+      section(data-bespoke-state='green')
+        h2 Add geolocation and maps to Evvent
+        a(href='https://www.songkick.com/developer/location-search') https://www.songkick.com/developer/location-search
+        a(href='https://www.songkick.com/developer/upcoming-events-for-metro-area') https://www.songkick.com/developer/upcoming-events-for-metro-area
+
+      section(data-bespoke-state='dark')(class='dark')
+        h2 Build Phonegap
+        p Simply upload your HTML5, CSS, and JavaScript assets to the Adobe® PhoneGap™ Build cloud service and we do the work of compiling for you.
+        img(src='images/build-phonegap.png')(class='full')
+
+      section(data-bespoke-state='dark')(class='dark')
+        img(src='images/build-phonegap-2.png')(class='full')
+
+      section(data-bespoke-state='blue')(class='blue')
+        ul
+          li
+            strong Google Play
+            li $25 one time
+          li
+            strong Apple AppStore
+            li developer: $99/year
+            li enterprise: $299/year
+          li
+            strong Windows Marketplace
+            li $99/year
+          li
+            strong Blackberry App World
+            li free
+
+      section(data-bespoke-state='reveal')
+        h2 Matteo Magni
+        h4 Twitter <a href="http://github.com/ilbonzo">@ilbonzo</a>
+        h4 Github <a href="http://twitter.com/ilbonzo">@ilbonzo</a>
 
     // build:js scripts/scripts.js
     script(src='bower_components/bespoke.js/dist/bespoke.min.js')
