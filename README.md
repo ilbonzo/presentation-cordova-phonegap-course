@@ -1,6 +1,6 @@
 # Building Mobile Applications with HTML/Js/Css and Phonegap
 
-> [View the presentation online](http://matteomagni.net/presentation-phonegap-course)
+> [View the presentation online](http://magni.me/presentation-phonegap-course)
 
 ## Phonegap demo
 
