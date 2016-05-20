@@ -356,7 +356,7 @@ section.blue {
   background-image: url("../images/jquery-mobile.png");
 }
 .phonegap-architecture {
-  background-image: url("../images/phonegap-architecture.jpg");
+  background-image: url("../images/phonegap-architecture.png");
 }
 .fight {
   background-image: url("../images/fight.gif");
@@ -406,14 +406,8 @@ section.blue {
 .user-interface {
   background-image: url("../images/user-interface.jpg");
 }
-.theme-roller {
-  background-image: url("../images/theme-roller.png");
-}
 .grunt {
   background-image: url("../images/grunt.png");
-}
-.theme {
-  background-image: url("../images/theme.png");
 }
 .cordova-xcode {
   background-image: url("../images/cordova-on-xcode.png");
@@ -423,21 +417,12 @@ section.blue {
   background-image: url("../images/android-adt.png");
   background-color: #000;
 }
-.songkick {
-  background-image: url("../images/songkick.png");
-  background-color: #000;
+.package-manager {
+  background-image: url("../images/package-manager.png");
 }
-.accelerometer-demo {
-  background-image: url("../images/accelerometer-demo.png");
+.lost {
+  background-image: url("../images/lost.gif");
 }
-.demo-maps {
-  background-image: url("../images/demo-maps.png");
-  background-color: #0769ad;
-}
-.app-developer {
-  background-image: url("../images/app-phonegap-developer.png");
-  background-color: #000;
-}
-.google-maps-api {
-  background-image: url("../images/google-maps-api.png");
+.gulp {
+  background-image: url("../images/gulp.png");
 }
